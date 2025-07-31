@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: syd-api
+    env: node
+    region: virginia
+    buildCommand: cd server && npm install
+    startCommand: cd server && npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: GODADDY_EMAIL
+        sync: false # será configurado manualmente no dashboard
+      - key: GODADDY_PASS
+        sync: false # será configurado manualmente no dashboard
