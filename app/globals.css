@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: 'Inter', 'Open Sans', sans-serif;
+}
+
+@layer base {
+
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 9%;
+
+    --primary: 164 79% 30%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 161 55% 46%;
+    --secondary-foreground: 0 0% 98%;
+    --stroke: 220 5% 92%;
+    --primary-text: 220 24% 12%;
+    --secondary-text: 220 8% 35%;
+    --success: 142 76% 36%;
+    --warning: 38 92% 50%;
+    --error: 0 84% 60%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 220 87% 51%;
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 8% 46%;
+    --accent: 220 14% 96%;
+    --accent-foreground: 220 8% 46%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 8% 46%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 8% 46%;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background: 220 20% 6%;
+      --foreground: 0 0% 93%;
+
+      --primary: 161 55% 46%;
+      --primary-foreground: 0 0% 9%;
+      --secondary: 164 79% 30%;
+      --secondary-foreground: 0 0% 98%;
+      --stroke: 220 5% 15%;
+      --primary-text: 0 0% 97%;
+      --secondary-text: 220 4% 60%;
+      --success: 153 91% 30%;
+      --warning: 28 97% 44%;
+      --error: 4 74% 49%;
+      
+      --border: 220 13% 18%;
+      --input: 220 13% 18%;
+      --ring: 220 87% 51%;
+      --muted: 220 14% 14%;
+      --muted-foreground: 220 8% 65%;
+      --accent: 220 14% 14%;
+      --accent-foreground: 220 8% 65%;
+      --destructive: 0 62% 30%;
+      --destructive-foreground: 0 0% 98%;
+      --popover: 0 0% 4%;
+      --popover-foreground: 220 8% 65%;
+      --card: 0 0% 4%;
+      --card-foreground: 220 8% 65%;
+    }
+  }
+}
+
+h1 {
+  font-family: 'Inter';
+  font-size: 2.375rem;
+  line-height: 3rem;
+  font-weight: 800;
+  color: white;
+}
+
+h2 {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-weight: 700;
+  color: hsl(var(--primary));
+}
+
+h3 {
+  font-size: 1.25rem;
+  line-height: 140%;
+  font-weight: 600;
+  color: hsl(var(--secondary));
+}
+
+p {
+  font-family: 'Opens Sans';
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  color: hsl(var(--secondary-text));
+}
+
+@layer components {
+  /* Custom Button Styles */
+  .btn-primary {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 rounded-2xl px-4 py-2 font-semibold transition-colors;
+  }
+
+  .btn-outline {
+    @apply border border-primary bg-transparent text-primary hover:bg-primary/10 rounded-2xl px-4 py-2 font-semibold transition-colors;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-quaternary-foreground hover:bg-secondary/80 rounded-2xl px-4 py-2 font-semibold transition-colors;
+  }
+}
