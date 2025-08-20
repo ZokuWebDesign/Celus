@@ -3,10 +3,10 @@ import type { Config } from "tailwindcss";
 export default {
 	darkMode: ["class"],
 	content: [
-		"./pages/**/*.{ts,tsx}",
-		"./components/**/*.{ts,tsx}",
-		"./app/**/*.{ts,tsx}",
-		"./src/**/*.{ts,tsx}",
+		"./app/**/*.{js,ts,jsx,tsx}",
+		"./pages/**/*.{js,ts,jsx,tsx}",
+		"./components/**/*.{js,ts,jsx,tsx}",
+		"./lib/**/*.{js,ts,jsx,tsx}",
 	],
 	prefix: "",
 	theme: {
@@ -32,9 +32,25 @@ export default {
 					DEFAULT: 'hsl(var(--secondary))',
 					foreground: 'hsl(var(--secondary-foreground))'
 				},
+				tertiary : {
+					DEFAULT: 'hsl(var(--primary-text))',
+					foreground: 'hsl(var(--primary-text))'
+				},
+				quaternary: {
+					DEFAULT: 'hsl(var(--secondary-text))',
+					foreground: 'hsl(var(--secondary-text))'
+				},
 				text: {
-					DEFAULT: 'hsl(var(--black))',
-					foreground: 'hsl(var(--black-foreground))'
+					DEFAULT: 'hsl(var(--primary-text))',
+					muted: 'hsl(var(--muted-foreground))',
+					disabled: 'hsl(var(--muted-foreground))',
+					placeholder: 'hsl(var(--muted-foreground))',
+					inverse: 'hsl(var(--background))',
+					success: 'hsl(var(--success))',
+					warning: 'hsl(var(--warning))',
+					error: 'hsl(var(--error))',
+					info: 'hsl(var(--primary))',
+					foreground: 'hsl(var(--foreground))'
 				},
 				destructive: {
 					DEFAULT: 'hsl(var(--destructive))',
@@ -65,6 +81,20 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				status: {
+					success: 'hsl(142 76% 36%)',
+					warning: 'hsl(38 92% 50%)',
+					error: 'hsl(var(--destructive))',
+					info: 'hsl(var(--primary))',
+					pending: 'hsl(45 93% 47%)'
+				},
+				medical: {
+					low: 'hsl(142 76% 36%)',
+					moderate: 'hsl(38 92% 50%)',
+					high: 'hsl(var(--destructive))',
+					critical: 'hsl(0 84% 40%)',
+					neutral: 'hsl(var(--muted))'
 				}
 			},
 			borderRadius: {
