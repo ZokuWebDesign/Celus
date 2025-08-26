@@ -1,6 +1,6 @@
 # Celus: Smart Thyroid Nodule Assessment ⚕️
 
-Welcome to **Celus**, a clinical-grade application designed to assist healthcare professionals in the structured evaluation of thyroid nodules using the ACR TI-RADS protocol. With a user-centered interface and medically accurate logic, Celus supports ultrasound interpretation with clarity, speed, and precision.
+Welcome to **Celus**, a clinical-grade application designed to assist healthcare professionals in the structured evaluation of thyroid nodules using the ACR TI-RADS protocol. With a user-centered interface and medically accurate logic, Celus supports ultrasound interpretation with clarity, speed, and precision. 
 
 You can access the [project's live website here](https://celus.com.br/).
 
