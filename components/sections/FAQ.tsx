@@ -8,90 +8,75 @@ import {
 
 const faqs = [
   {
-    question: "1. Como funciona o teste gratuito do upOS?",
-    answer: "Você pode testar o sistema gratuitamente por 7 dias, com acesso completo a todas as funcionalidades do plano Profissional. Não precisa de cartão de crédito para começar."
+    question: "Celus serve só para médicos?",
+    answer: "Não. O app foi pensado para todos os profissionais da saúde que usam ultrassonografia no dia a dia — incluindo paramédicos, residentes e sonographers."
   },
   {
-    question: "2. Preciso instalar algo para usar o sistema?",
-    answer: "Não! O upOS é 100% online e funciona direto no seu navegador. Você pode acessar de qualquer lugar, a qualquer hora, sem instalar nada."
+    question: "Preciso de internet para usar?",
+    answer: "O Celus funciona tanto online quanto offline. Você pode baixar conteúdos quando tiver internet e acessá-los posteriormente mesmo sem conexão, garantindo que sempre tenha as informações necessárias na hora do atendimento."
   },
   {
-    question: "3. É fácil de usar mesmo? Minha equipe vai conseguir sem treinamento?",
-    answer: "Sim! O upOS foi desenvolvido para ser intuitivo. A interface é simples e organizada, permitindo que sua equipe comece a usar imediatamente. Oferecemos também materiais de apoio e suporte."
+    question: "Posso testar antes de assinar?",
+    answer: "Sim! Oferecemos uma versão gratuita com acesso a conteúdos selecionados para que você possa experimentar as funcionalidades antes de decidir pelo plano premium."
   },
   {
-    question: "4. Posso personalizar os serviços e valores conforme minha loja?",
-    answer: "Claro! Você pode cadastrar todos os seus serviços, definir preços personalizados e criar regras de precificação que se adequem ao seu negócio e margem de lucro desejada."
+    question: "O app substitui a formação médica?",
+    answer: "Não. O Celus é uma ferramenta de apoio que complementa sua formação e experiência clínica, fornecendo referências rápidas e protocolos validados para auxiliar na tomada de decisões."
   },
   {
-    question: "5. Já vem com modelos de celulares e serviços cadastrados?",
-    answer: "Sim! O sistema já vem com um banco de dados completo dos principais modelos de smartphones e os serviços mais comuns. Você pode usar como está ou personalizar conforme sua necessidade."
+    question: "Como são atualizados os conteúdos?",
+    answer: "Nosso time de especialistas atualiza constantemente os protocolos, calculadoras e resumos com base nas mais recentes evidências científicas e diretrizes médicas internacionais."
   },
   {
-    question: "6. Como funciona o envio de orçamentos por WhatsApp?",
-    answer: "O sistema gera automaticamente um orçamento profissional em PDF e envia diretamente para o WhatsApp do cliente com apenas um clique. Isso agiliza o atendimento e melhora a conversão."
+    question: "Funciona em todos os celulares?",
+    answer: "Sim! O Celus é compatível com dispositivos Android e iOS, além de funcionar perfeitamente em tablets e computadores através do navegador web."
   },
   {
-    question: "7. O sistema tem PDV integrado para vender produtos também?",
-    answer: "Sim! Além de gerenciar serviços, o upOS possui PDV completo para venda de produtos, controle de estoque, emissão de nota fiscal e relatórios de vendas integrados."
+    question: "Os dados ficam seguros?",
+    answer: "Absolutamente. Utilizamos criptografia de ponta e seguimos todas as normas de segurança para proteção de dados médicos, garantindo total privacidade e conformidade com regulamentações de saúde."
   },
   {
-    question: "8. Posso configurar regras de precificação com base no meu lucro desejado?",
-    answer: "Perfeitamente! Você define suas margens de lucro por tipo de serviço ou produto, e o sistema calcula automaticamente os preços ideais para garantir sua rentabilidade."
-  },
-  {
-    question: "9. Dá pra acompanhar o desempenho da minha equipe e conversões?",
-    answer: "Sim! O sistema oferece relatórios completos de performance, conversão de orçamentos, produtividade da equipe e análises detalhadas para você tomar decisões estratégicas."
-  },
-  {
-    question: "10. O que acontece após o fim do teste gratuito?",
-    answer: "Você pode escolher um dos nossos planos para continuar usando. Seus dados ficam salvos e você mantém acesso a tudo que configurou durante o teste. Sem pegadinhas!"
+    question: "Posso sugerir novos conteúdos?",
+    answer: "Claro! Temos um canal direto para sugestões de nossa comunidade médica. Sua experiência prática ajuda a tornar o app ainda mais útil para todos os profissionais."
   }
 ];
 
 const FAQ = () => {
   return (
-    <section id="faq" className="bg-[#fffcf7] px-4 sm:px-8 lg:px-14 pt-[70px] pb-16 sm:pb-[90px]">
-      <div className="max-w-[1280px] mx-auto">
-        {/* Title centered at top */}
-        <div className="text-center pb-6">
-          <h2 className="text-[32px] font-bold text-primary">
-            Dúvidas Frequentes
+    <section id="faq" className="bg-[#edfcf6] px-4 lg:px-16 py-12 lg:py-28">
+      <div className="max-w-4xl mx-auto">
+        {/* Header Section */}
+        <div className="text-center mb-12 lg:mb-16">
+          <p className="text-[#108b6a] font-semibold text-base mb-4">
+            FAQ
+          </p>
+          <h2 className="text-[#108b6a] font-bold text-3xl lg:text-5xl leading-tight mb-6">
+            Perguntas Frequentes
           </h2>
+          <p className="text-[#101828] font-medium text-lg max-w-4xl mx-auto leading-relaxed">
+            Celus oferece tudo que você precisa para cuidar da sua prática médica e prevenir erros clínicos, com recursos inovadores e personalizados para cada necessidade.
+          </p>
         </div>
 
-        {/* Content with image on left and accordion on right */}
-        <div className="flex flex-col lg:flex-row gap-4 lg:gap-6 items-start">
-          {/* Left side - Image (sticky) */}
-          <div className="w-full lg:w-[392px] flex-shrink-0">
-            <div className="lg:sticky lg:top-8">
-              <img
-                className="w-full h-auto rounded-lg"
-                src="https://i.ibb.co/3yJ50hGP/features.webp"
-                alt="FAQ Illustration"
-              />
-            </div>
-          </div>
-
-          {/* Right side - Accordion */}
-          <div className="flex-1 w-full lg:max-w-[752px]">
-            <Accordion type="single" collapsible className="w-full space-y-4">
-              {faqs.map((faq, index) => (
-                <AccordionItem
-                  key={index}
-                  value={`item-${index}`}
-                  className="px-6 py-0"
-                >
-                  <AccordionTrigger className="py-5 text-[#545353] hover:no-underline">
-                    <span className="text-left text-xl font-semibold">{faq.question}</span>
-                  </AccordionTrigger>
-                  <AccordionContent className="text-[#5B5B5B]">
-                    {faq.answer}
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
-          </div>
+        {/* FAQ Accordion */}
+        <div className="space-y-4">
+          <Accordion type="single" collapsible className="w-full space-y-4">
+            {faqs.map((faq, index) => (
+              <AccordionItem
+                key={index}
+                value={`item-${index}`}
+              >
+                <AccordionTrigger>
+                  <span>
+                    {faq.question}
+                  </span>
+                </AccordionTrigger>
+                <AccordionContent>
+                  {faq.answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
         </div>
       </div>
     </section>

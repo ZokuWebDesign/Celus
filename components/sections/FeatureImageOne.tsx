@@ -1,44 +1,127 @@
 "use client";
 
-import { ChevronRight } from 'lucide-react';
+import { 
+  TrendingDown, 
+  AlertTriangle, 
+  Users, 
+  Smartphone, 
+  Clock, 
+  FileX 
+} from 'lucide-react';
 
 const FeatureImageOne = () => {
-  const problems = [
-    "Cansado de ter que explicar *todo dia* para seus funcionários como precificar um serviço?",
-    "Já perdeu vendas porque o cliente não quis esperar alguém \"autorizar\" um desconto?",
-    "Seu sistema de OS parece feito por alguém que nunca mexeu num celular?",
-    "Sua equipe se atrapalha com orçamentos, agendamentos e esquecimentos?",
-    "Está preso a sistemas genéricos, que fazem sua loja parecer uma oficina de bicicleta?"
+  const leftColumnStats = [
+    {
+      icon: TrendingDown,
+      heading: "72% dos profissionais",
+      text: "Relatam dificuldade em acessar conteúdo prático e validado de ultrassonografia no momento do atendimento."
+    },
+    {
+      icon: AlertTriangle,
+      heading: "68% dos laudos clínicos",
+      text: "Apresentam variações por falta de padronização, o que afeta diretamente a tomada de decisão."
+    },
+    {
+      icon: Users,
+      heading: "83% dos residentes e não médicos",
+      text: "Sentem insegurança ao realizar exames por falta de orientação clara e acessível."
+    }
+  ];
+
+  const rightColumnStats = [
+    {
+      icon: Smartphone,
+      heading: "90% dos apps médicos",
+      text: "São considerados densos, confusos ou mal adaptados ao uso no dia a dia clínico."
+    },
+    {
+      icon: Clock,
+      heading: "Mais de 60% dos médicos",
+      text: "Dizem que perdem tempo procurando protocolos ou calculadoras confiáveis durante o plantão."
+    },
+    {
+      icon: FileX,
+      heading: "Apenas 1 em cada 4 profissionais",
+      text: "Usa ferramentas móveis com frequência por não confiar na precisão ou usabilidade delas."
+    }
   ];
 
   return (
-    <section id='desafios' className="bg-[#f9fcff] px-4 lg:px-16 py-12 lg:py-28">
+    <section id='precisao-agilidade' className="bg-white px-4 lg:px-16 py-12 lg:py-28">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center justify-center">
-          {/* Left side - Image */}
-          <div className="flex-1 max-w-[469px]">
-            <img
-              src={'https://i.ibb.co/wFWsX3Xk/imageone.webp'}
-              alt="Funcionários confusos"
-              className="w-full h-auto rounded-lg"
-            />
-          </div>
+        {/* Section Title */}
+        <div className="text-center mb-12 lg:mb-16">
+          <p className="text-primary font-semibold text-base mb-4">
+            Precisão e Agilidade
+          </p>
+          <h2 className="text-primary font-bold text-3xl lg:text-5xl leading-tight mb-6 max-w-4xl mx-auto">
+            Quando você mais precisa, o conhecimento não pode faltar
+          </h2>
+          <p className="text-[#101828] font-medium text-lg max-w-4xl mx-auto leading-relaxed">
+            Quando o tempo é curto e a precisão faz diferença entre acertar ou errar, depender de conteúdo desatualizado ou mal estruturado pode custar caro. A realidade é que muitos profissionais da saúde enfrentam barreiras invisíveis todos os dias: pouca padronização, ferramentas dispersas e a sensação constante de que estão sozinhos na hora de decidir. E pior — os recursos disponíveis mais confundem do que ajudam.
+          </p>
+        </div>
 
-          {/* Right side - Content */}
-          <div className="flex-1 max-w-[469px]">
-            <div className="space-y-6">
-              {problems.map((problem, index) => (
-                <div key={index} className="flex items-start gap-2 lg:gap-4">
-                  <div className="flex-shrink-0 mt-0.5">
-                    <ChevronRight size={24} className="text-primary" />
+        {/* Content Section */}
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center justify-center mb-12">
+          {/* Left Column - Statistics */}
+          <div className="flex-1 max-w-[303px] space-y-8">
+            {leftColumnStats.map((stat, index) => {
+              const IconComponent = stat.icon;
+              return (
+                <div key={index} className="text-center">
+                  <div className="flex justify-center mb-4">
+                    <IconComponent size={48} className="text-primary" />
                   </div>
-                  <p className="text-[#414651] font-medium text-base lg:text-xl leading-6 flex-1">
-                    {problem}
+                  <h3 className="text-primary font-bold text-2xl mb-2 leading-tight">
+                    {stat.heading}
+                  </h3>
+                  <p className="text-tertiary font-medium text-base leading-relaxed">
+                    {stat.text}
                   </p>
                 </div>
-              ))}
+              );
+            })}
+          </div>
+
+          {/* Center - Phone Image */}
+          <div className="flex-1 max-w-[466px] relative">
+            <div className="relative">
+              <img
+                src="https://i.ibb.co/wFWsX3Xk/imageone.webp"
+                alt="Celus App Interface"
+                className="w-full h-auto rounded-2xl"
+              />
+              <div className="absolute inset-0 rounded-2xl border-2 border-gradient-to-b from-primary to-[#35b78b]"></div>
             </div>
           </div>
+
+          {/* Right Column - Statistics */}
+          <div className="flex-1 max-w-[303px] space-y-8">
+            {rightColumnStats.map((stat, index) => {
+              const IconComponent = stat.icon;
+              return (
+                <div key={index} className="text-center">
+                  <div className="flex justify-center mb-4">
+                    <IconComponent size={48} className="text-primary" />
+                  </div>
+                  <h3 className="text-primary font-bold text-2xl mb-2 leading-tight">
+                    {stat.heading}
+                  </h3>
+                  <p className="text-tertiary font-medium text-base leading-relaxed">
+                    {stat.text}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* CTA Button */}
+        <div className="text-center">
+          <button className="bg-primary text-white font-bold text-lg px-8 py-4 rounded-lg hover:bg-[#0e7a5d] transition-colors duration-200">
+            Baixar agora
+          </button>
         </div>
       </div>
     </section>

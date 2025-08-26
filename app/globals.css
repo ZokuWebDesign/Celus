@@ -16,9 +16,9 @@
     --primary-foreground: 0 0% 98%;
     --secondary: 161 55% 46%;
     --secondary-foreground: 0 0% 98%;
+    --primary-text: 221 43% 11%;
+    --secondary-text: 221 43% 11%;
     --stroke: 220 5% 92%;
-    --primary-text: 220 24% 12%;
-    --secondary-text: 220 8% 35%;
     --success: 142 76% 36%;
     --warning: 38 92% 50%;
     --error: 0 84% 60%;

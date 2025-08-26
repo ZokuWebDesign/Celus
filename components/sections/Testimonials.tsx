@@ -1,136 +1,133 @@
 "use client";
-import { useState, useRef, MouseEvent } from "react";
+import { useState, useEffect } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+
+import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 const testimonials = [
   {
-    quote: "Em duas semanas usando o upOS, minha taxa de conversão de orçamentos subiu de 40% para 70%",
-    name: "Lucas V.",
-    role: "Dono de assistência técnica"
+    quote: "A funcionalidade de urgência é sensacional! Em situações que eu não podia esperar dias por uma consulta, o SYD me deu suporte na hora. Recomendo para todos que precisam de apoio imediato.",
+    name: "Thaís Moura",
+    /*crp: "",*/
+    image: "https://i.imgur.com/RiCNUWV.jpeg"
   },
   {
-    quote: "Reduzi em 90% os erros de comunicação com a equipe técnica graças ao histórico nas OS",
-    name: "Mariana A.",
-    role: "Dona de assistência técnica"
+    quote: "Depois que conheci o SYD, nunca mais deixei minha saúde emocional de lado. Os psicólogos são excelentes e o atendimento é muito humano. A plataforma é simples, segura e funciona muito bem.",
+    name: "Bruna Almeida",
+    /*crp: "",*/
+    image: "https://i.imgur.com/4507tyO.jpeg"
   },
   {
-    quote: "Antes era um caos passar preços. Agora, o vendedor só insere o custo e o sistema calcula tudo sozinho.",
-    name: "Andre S.",
-    role: "Dono de assistência técnica"
+    quote: "A empresa onde trabalho contratou o SYD e foi um divisor de águas. Me senti acolhido em momentos difíceis e passei a ver o cuidado com a saúde mental com outros olhos. Atendimento rápido, sigiloso e de qualidade.",
+    name: "Camila Ferreira",
+    /*crp: "",*/
+    image: "https://i.imgur.com/mCLpyQD.jpeg"
   },
   {
-    quote: "Antes do upOS, perdíamos prazos e esquecíamos pagamentos. Agora tudo está em um só lugar!",
-    name: "Lucas R.",
-    role: "Dono de assistência técnica"
+    quote: "Gosto muito da liberdade de pagar por minuto. Sem compromisso, sem pressão, só entro quando realmente preciso. Já usei duas vezes e fui super bem atendida. Recomendo muito!",
+    name: "Rafaela Souza",
+    /*crp: "",*/
+    image: "https://i.imgur.com/R3VWDDC.jpeg"
   },
   {
-    quote: "O painel é leve, rápido e super intuitivo. Consigo acompanhar minha equipe de qualquer lugar.",
-    name: "Patrícia M.",
-    role: "Gestora"
-  },
-  {
-    quote: "Economizo pelo menos 2 horas por dia só por ter tudo centralizado. O sistema é direto, sem enrolação.",
-    name: "Juliana M.",
-    role: "Técnica de informática"
-  },
-  {
-    quote: "O controle de contas a pagar e receber me salvou. Antes era tudo no caderno. Hoje recebo lembrete automático e não atraso mais nada.",
-    name: "Carlos V.",
-    role: "Micro empreendedor"
+    quote: "Eu estava em crise de ansiedade numa madrugada e achei o SYD no Google. Em menos de 5 minutos estava conversando com uma psicóloga incrível. Nunca pensei que atendimento psicológico urgente fosse possível assim. Mudou minha vida!",
+    name: "Mariana Lopes",
+    /*crp: "",*/
+    image: "https://i.imgur.com/kbwztml.jpeg"
   }
 ];
 
 const Testimonials = () => {
-  const [isDragging, setIsDragging] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [scrollLeft, setScrollLeft] = useState(0);
-  const containerRef = useRef<HTMLDivElement>(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  const handleMouseDown = (e: MouseEvent<HTMLDivElement>) => {
-    setIsDragging(true);
-    if (containerRef.current) {
-      setStartX(e.pageX - containerRef.current.offsetLeft);
-      setScrollLeft(containerRef.current.scrollLeft);
-    }
+  const nextTestimonial = () => {
+    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
   };
 
-  const handleMouseUp = () => {
-    setIsDragging(false);
+  const prevTestimonial = () => {
+    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
 
-  const handleMouseLeave = () => {
-    setIsDragging(false);
-  };
+  useEffect(() => {
+    const interval = setInterval(nextTestimonial, 5000);
+    return () => clearInterval(interval);
+  }, []);
 
-  const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
-    if (!isDragging) return;
-    e.preventDefault();
-    if (containerRef.current) {
-      const x = e.pageX - containerRef.current.offsetLeft;
-      const walk = (x - startX) * 2;
-      containerRef.current.scrollLeft = scrollLeft - walk;
-    }
-  };
+  const currentTestimonial = testimonials[currentIndex];
 
   return (
-    <>
-      <style>
-        {`
-          .scrollbar-hide::-webkit-scrollbar {
-            display: none;
-          }
-        `}
-      </style>
-      <section id="depoimentos" className="w-full bg-[#f8f7f6] py-[70px]">
-        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-14">
-          <div className="flex flex-col items-center gap-10">
-            {/* Header */}
-            <div className="text-center">
-              <h2 className="text-[32px] font-bold text-primary leading-10">
-                O que estão dizendo...
-              </h2>
-            </div>
+    <section className="w-full max-w-7xl mx-auto flex flex-col items-start self-stretch gap-8 py-16 lg:py-28 px-4 sm:px-6 lg:px-14 bg-white">
+      {/* Container */}
+      <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        {/* Content */}
+        <div className="flex flex-col items-start gap-6 md:gap-8">
+          {/* Stars */}
+          <div className="flex items-start gap-1">
+            <img src="/assets/icons/star.svg" className="w-5 h-5" />
+            <img src="/assets/icons/star.svg" className="w-5 h-5" />
+            <img src="/assets/icons/star.svg" className="w-5 h-5" />
+            <img src="/assets/icons/star.svg" className="w-5 h-5" />
+            <img src="/assets/icons/star.svg" className="w-5 h-5" />
+          </div>
 
-            {/* Testimonials Cards */}
-            <div 
-              ref={containerRef}
-              className="w-full overflow-x-auto pb-4 cursor-grab active:cursor-grabbing scrollbar-hide"
-              style={{
-                scrollbarWidth: 'none',
-                msOverflowStyle: 'none',
-                WebkitOverflowScrolling: 'touch'
-              }}
-              onMouseDown={handleMouseDown}
-              onMouseUp={handleMouseUp}
-              onMouseLeave={handleMouseLeave}
-              onMouseMove={handleMouseMove}
-            >
-              <div className="flex gap-6 min-w-max px-4">
-                {testimonials.map((testimonial, index) => (
-                  <div 
-                    key={index}
-                    className="w-[305px] bg-background border border-[#e9eaeb] rounded-2xl p-4 select-none"
-                  >
-                    <div className="flex flex-col justify-between h-[180px]">
-                      <p className="text-[#414651] text-base font-normal leading-[1.6] tracking-[-0.8px]">
-                        "{testimonial.quote}"
-                      </p>
-                      <div className="flex flex-col gap-1">
-                        <p className="text-[#414651] text-base font-semibold tracking-[-0.8px] leading-[1.17]">
-                          {testimonial.name}
-                        </p>
-                        <p className="text-[#717680] text-xs font-semibold tracking-[-0.6px] leading-[1.17]">
-                          {testimonial.role}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+          {/* Testimonial Text */}
+          <blockquote className="text-lg md:text-2xl text-[hsl(var(--black))] font-bold font-[Lato] [font-feature-settings:'liga'_off]">
+            "{currentTestimonial.quote}"
+          </blockquote>
+
+          {/* Avatar */}
+          <div className="flex flex-col items-start text-[hsl(var(--black))]">
+            <span className="text-lg font-medium">{currentTestimonial.name}</span>
+            {/* <span className="text-sm">{currentTestimonial.crp}</span>*/}
           </div>
         </div>
-      </section>
-    </>
+
+        {/* Image */}
+        <div className="w-full order-first lg:order-last">
+          <img 
+            src={currentTestimonial.image} 
+            alt="Testimonial visual" 
+            className="w-full h-auto object-cover rounded-lg transition-all duration-500" 
+          />
+        </div>
+      </div>
+
+      {/* Navigation */}
+      <div className="w-full flex justify-between items-center">
+        {/* Slider Dots */}
+        <div className="flex gap-2">
+          {testimonials.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              className={`w-3 h-3 rounded-full transition-colors ${
+                index === currentIndex ? 'bg-secondary' : 'bg-gray-300'
+              }`}
+            />
+          ))}
+        </div>
+        {/* Slider Buttons */}
+        <div className="flex gap-3">
+          <Button
+            variant="outline"
+            size="icon"
+            onClick={prevTestimonial}
+            className="rounded-full border-2 border-secondary text-secondary hover:bg-secondary hover:text-white"
+          >
+            <ChevronLeft className="w-4 h-4" />
+          </Button>
+          <Button
+            variant="outline"
+            size="icon"
+            onClick={nextTestimonial}
+            className="rounded-full border-2 border-secondary text-secondary hover:bg-secondary hover:text-white"
+          >
+            <ChevronRight className="w-4 h-4" />
+          </Button>
+        </div>
+      </div>
+    </section>
   );
 };
 

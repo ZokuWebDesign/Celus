@@ -1,28 +1,30 @@
 import Header from "@/components/sections/Header";
 import Hero from "@/components/sections/Hero";
-import Banner from "@/components/sections/Banner";
 import FeatureImageOne from "@/components/sections/FeatureImageOne";
-import FeaturesWithImage from "@/components/sections/FeaturesWithImage";
 import ComoFunciona from "@/components/sections/ComoFunciona";
-import FeatureImageTwo from "@/components/sections/FeatureImageTwo";
+import FeatureTwo from "@/components/sections/FeatureTwo";
 import CTA from "@/components/sections/CTA";
 import Testimonials from "@/components/sections/Testimonials";
 import FAQ from "@/components/sections/FAQ";
 import Footer from "@/components/sections/Footer";
+import Contact from "@/components/sections/Contact";
+import Pricing from "@/components/sections/Pricing";
+import AppDownload from "@/components/sections/AppDownload";
 
 export default function Page() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-white">
       <Header />
       <Hero />
-      <Banner />
       <FeatureImageOne />
-      <FeaturesWithImage />
       <ComoFunciona />
-      <FeatureImageTwo />
-      <CTA />
       <Testimonials />
+      <FeatureTwo />
+      <Pricing />
       <FAQ />
+      <Contact />
+      <CTA />
+      <AppDownload />
       <Footer />
     </div>
   );

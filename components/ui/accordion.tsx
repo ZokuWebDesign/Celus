@@ -11,7 +11,7 @@ const AccordionItem = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <AccordionPrimitive.Item
     ref={ref}
-    className={cn("bg-background rounded-xl", className)}
+    className={cn("bg-transparent data-[state=open]:bg-white border border-[#35B48B] rounded-xl overflow-hidden transition-colors duration-200", className)}
     {...props}
   />
 ))
@@ -25,44 +25,64 @@ const AccordionTrigger = React.forwardRef<
     <AccordionPrimitive.Trigger
       ref={ref}
       className={cn(
-        "group flex flex-1 items-center justify-between py-4 transition-all hover:underline",
+        "group flex flex-1 items-center justify-center py-5 px-6 transition-all hover:bg-gray-50/50",
         className
       )}
       {...props}
     >
-      {children}
-      <div className="relative h-8 w-8">
+      <div className="flex-1 text-left">
+        <span className="text-lg font-medium text-[#101828] leading-[140%]">
+          {children}
+        </span>
+      </div>
+      <div className="relative w-8 h-8 flex-none ml-4">
+        {/* Plus icon (closed state) */}
         <svg 
-          className="absolute h-full w-full transition-opacity group-data-[state=closed]:opacity-100 group-data-[state=open]:opacity-0"
+          className="absolute inset-0 w-full h-full transition-opacity group-data-[state=closed]:opacity-100 group-data-[state=open]:opacity-0"
           width="32" 
           height="32" 
           viewBox="0 0 32 32" 
           fill="none" 
           xmlns="http://www.w3.org/2000/svg"
         >
-          <path 
-            d="M15.9974 10.666V21.3327M10.6641 15.9993H21.3307M29.3307 15.9993C29.3307 23.3631 23.3612 29.3327 15.9974 29.3327C8.6336 29.3327 2.66406 23.3631 2.66406 15.9993C2.66406 8.63555 8.6336 2.66602 15.9974 2.66602C23.3612 2.66602 29.3307 8.63555 29.3307 15.9993Z" 
-            stroke="#234ED9" 
+          <circle 
+            cx="16" 
+            cy="16" 
+            r="13" 
+            stroke="#35B48B" 
             strokeWidth="2" 
-            strokeLinecap="round" 
-            strokeLinejoin="round"
+            fill="none"
+          />
+          <path 
+            d="M16 10v12M10 16h12" 
+            stroke="#35B48B" 
+            strokeWidth="2" 
+            strokeLinecap="round"
           />
         </svg>
+        
+        {/* Minus icon (open state) */}
         <svg 
-          className="absolute h-full w-full transition-opacity group-data-[state=closed]:opacity-0 group-data-[state=open]:opacity-100"
+          className="absolute inset-0 w-full h-full transition-opacity group-data-[state=closed]:opacity-0 group-data-[state=open]:opacity-100"
           width="32" 
           height="32" 
           viewBox="0 0 32 32" 
           fill="none" 
           xmlns="http://www.w3.org/2000/svg"
         >
-          <path 
-            d="M12.2256 12.2288L19.768 19.7712M12.2256 19.7712L19.768 12.2288M25.4249 6.57191C30.6319 11.7789 30.6319 20.2211 25.4249 25.4281C20.2179 30.6351 11.7757 30.6351 6.56871 25.4281C1.36172 20.2211 1.36172 11.7789 6.56871 6.57191C11.7757 1.36492 20.2179 1.36492 25.4249 6.57191Z" 
-            stroke="#D92D20"
-            stroke-opacity="0.8"
+          <circle 
+            cx="16" 
+            cy="16" 
+            r="13" 
+            stroke="#35B48B" 
             strokeWidth="2" 
-            strokeLinecap="round" 
-            strokeLinejoin="round"
+            fill="none"
+          />
+          <path 
+            d="M10 16h12" 
+            stroke="#35B48B" 
+            strokeWidth="2" 
+            strokeLinecap="round"
           />
         </svg>
       </div>
@@ -80,7 +100,17 @@ const AccordionContent = React.forwardRef<
     className="overflow-hidden text-base transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
     {...props}
   >
-    <div className={cn("py-4 border-t border-[#D9D9D9]", className)}>{children}</div>
+    {/* Divider */}
+    <div className="flex justify-center items-center px-6">
+      <div className="flex-1 h-px bg-[#D5D7DA]"></div>
+    </div>
+    
+    {/* Content */}
+    <div className={cn("py-4 px-6", className)}>
+      <div className="text-base font-normal text-[#101828] leading-[160%]">
+        {children}
+      </div>
+    </div>
   </AccordionPrimitive.Content>
 ))
 

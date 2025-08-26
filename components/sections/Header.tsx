@@ -10,6 +10,15 @@ const Header = () => {
   const menuRef = useRef<HTMLDivElement>(null);
   const isVisible = useScrollDirection();
 
+  const navigationItems = [
+    { name: "Início", href: "#inicio" },
+    { name: "Funcionalidades", href: "#funcionalidades" },
+    { name: "Depoimentos", href: "#depoimentos" },
+    { name: "Planos", href: "#planos" },
+    { name: "FAQ", href: "#faq" },
+    { name: "Contato", href: "#contato" }
+  ];
+
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
@@ -29,64 +38,57 @@ const Header = () => {
   return (
     <>
       <header 
-        className={`sticky top-0 bg-[#f3f3f3] shadow-[0px_4px_16px_0px_rgba(0,0,0,0.04)] z-30 transition-transform duration-300 ${
+        className={`sticky top-0 bg-white shadow-sm z-30 transition-transform duration-300 ${
           isVisible ? 'translate-y-0' : '-translate-y-full'
         }`}
       >
-        <div className="max-w-7xl mx-auto">
-          <div className="flex justify-between items-center px-4 md:px-14 py-[21px]">
+        <div className="max-w-[1280px] mx-auto">
+          <div className="flex justify-between items-center px-4 lg:px-[72px] py-4">
             {/* Logo */}
-            <div className={`${isMobile ? 'h-6 w-[69px]' : 'h-[44px] w-[127px]'}`}>
+            <div className={`${isMobile ? 'h-8 w-[120px]' : 'h-12 w-[180px]'}`}>
               <a 
                 href="#inicio"
-                className="w-full h-full"
+                className="w-full h-full flex items-center"
               >
-                <img
-                  src="/assets/logo/logo-header.svg"
-                  alt="upOS Logo"
-                  className="w-full h-full object-contain"
-                />
+                <div className="w-10 h-10 bg-[#35b48b] rounded-lg flex items-center justify-center">
+                  <div className="w-6 h-6 bg-white rounded-full"></div>
+                </div>
+                <span className="ml-3 text-xl font-bold text-[#108b6a]">Celus</span>
               </a>
             </div>
 
-            {/* Desktop Actions */}
+            {/* Desktop Navigation */}
             {!isMobile && (
-              <div className="flex items-center gap-4">
-                <Button variant="ghost" className="px-4 py-[10px]">
+              <nav className="flex items-center space-x-8">
+                {navigationItems.map((item, index) => (
                   <a
-                    href="https://all-price-copy.bubbleapps.io/login"
-                    className="w-full text-base font-bold"
+                    key={index}
+                    href={item.href}
+                    className="text-[#475467] hover:text-[#108b6a] text-sm transition-colors duration-200 relative group"
                   >
-                    Preço
+                    {item.name}
+                    <div className="absolute bottom-[-8px] left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-[#108b6a] rounded-full transition-all duration-200 group-hover:w-full"></div>
                   </a>
-                </Button>
-                <Button variant="primary" className="w-[153px] h-11">
-                  <a
-                    href="https://all-price-copy.bubbleapps.io/cadastro"
-                    className="w-full text-base font-bold"
-                  >
-                    Teste grátis
-                  </a>
-                </Button>
-              </div>
+                ))}
+              </nav>
+            )}
+
+            {/* Desktop CTA */}
+            {!isMobile && (
+              <Button className="bg-[#108b6a] hover:bg-[#0d7456] text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200">
+                Baixe agora
+              </Button>
             )}
 
             {/* Mobile Actions */}
             {isMobile && (
-              <div className="flex items-center gap-4">
-                <button 
-                  className="h-[34px] px-4 rounded-[12.4px] bg-primary hover:bg-primary/90 border border-[#288DF8]"
-                >
-                  <a
-                    href="https://all-price-copy.bubbleapps.io/cadastro"
-                    className="w-full text-sm text-white font-bold"
-                  >
-                    Testar grátis
-                  </a>
-                </button>
+              <div className="flex items-center gap-3">
+                <Button className="bg-[#108b6a] hover:bg-[#0d7456] text-white px-4 py-2 rounded-lg text-sm font-semibold">
+                  Baixar
+                </Button>
                 <button
                   onClick={() => setIsMobileMenuOpen(true)}
-                  className="flex items-center justify-center w-6 h-6 text-primary"
+                  className="flex items-center justify-center w-8 h-8 text-[#475467]"
                 >
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M3 12H21M3 6H21M3 18H21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -102,66 +104,51 @@ const Header = () => {
       {isMobileMenuOpen && (
         <>
           {/* Backdrop */}
-          <div className="fixed inset-0 z-40" /> {/*  bg-black/20 */}
+          <div className="fixed inset-0 bg-black/20 z-40" />
+          
           {/* Menu */}
-          <div ref={menuRef} className="fixed top-[88px] left-0 right-0 mx-4 bg-background z-50 px-[6px] py-[12px] shadow-lg rounded-2xl">
+          <div ref={menuRef} className="fixed top-[88px] left-0 right-0 mx-4 bg-white z-50 px-6 py-6 shadow-xl rounded-2xl border border-gray-100">
             <div className="flex flex-col">
               {/* Mobile Menu Header */}
-              <div className="flex items-center relative mb-6">
-                <div className="absolute right-0">
-                  <button
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="w-6 h-6 text-[#2F2F2F]"
-                  >
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </button>
+              <div className="flex items-center justify-between mb-6">
+                <div className="flex items-center">
+                  <div className="w-8 h-8 bg-[#35b48b] rounded-lg flex items-center justify-center">
+                    <div className="w-5 h-5 bg-white rounded-full"></div>
+                  </div>
+                  <span className="ml-2 text-lg font-bold text-[#108b6a]">Celus</span>
                 </div>
-                <div className="h-[44px] w-[127px] mx-auto">
-                  <img
-                    src="/assets/logo/logo-header.svg"
-                    alt="upOS Logo"
-                    className="w-full h-full object-contain"
-                  />
-                </div>
+                <button
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="w-8 h-8 text-[#475467] hover:text-[#108b6a] transition-colors"
+                >
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </button>
               </div>
 
-              {/* Mobile Menu Content */}
-              <div className="flex flex-col gap-2.5 mt-2 p-[19px] border-2 border-[#F7F7F7] rounded-[9px]">
-                <button className="w-full">
+              {/* Mobile Navigation Items */}
+              <nav className="flex flex-col space-y-1">
+                {navigationItems.map((item, index) => (
                   <a
-                    href="https://all-price-copy.bubbleapps.io/login"
-                    className="flex justify-between items-center w-full h-[53px] px-4 rounded-2xl bg-[#F7F7F7] text-primary font-semibold text-[18.4px]"
+                    key={index}
+                    href={item.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="flex items-center justify-between w-full px-4 py-3 rounded-xl bg-[#f8fffe] hover:bg-[#edfcf6] text-[#475467] hover:text-[#108b6a] font-medium transition-colors duration-200"
                   >
-                    Minha conta
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    {item.name}
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   </a>
-                </button>
-                <button className="w-full">
-                  <a
-                    href="https://all-price-copy.bubbleapps.io/cadastro"
-                    className="flex justify-between items-center w-full h-[53px] px-4 rounded-2xl bg-[#F7F7F7] text-primary font-semibold text-[18.4px]"
-                  >
-                    Cadastrar
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </a>
-                </button>
-                <button className="w-full">
-                  <a 
-                    href="https://api.whatsapp.com/send/?phone=5511989705048&text=Ol%C3%A1!%20Preciso%20de%20ajuda%20com%20o%20AllPrice.%20Por%20favor%2C%20podem%20me%20auxiliar%3F&type=phone_number&app_absent=0"
-                    className="flex justify-between items-center w-full h-[53px] px-4 rounded-2xl bg-[#F7F7F7] text-primary font-semibold text-[18.4px]"
-                  >
-                    Falar com suporte
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </a>
-                </button>
+                ))}
+              </nav>
+
+              {/* Mobile CTA Section */}
+              <div className="mt-6 pt-6 border-t border-gray-100">
+                <Button className="w-full bg-[#108b6a] hover:bg-[#0d7456] text-white py-3 rounded-xl font-semibold">
+                  Baixe agora
+                </Button>
               </div>
             </div>
           </div>
