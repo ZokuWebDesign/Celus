@@ -7,34 +7,34 @@ import Image from "next/image";
 
 const testimonials = [
   {
-    quote: "A funcionalidade de urgência é sensacional! Em situações que eu não podia esperar dias por uma consulta, o SYD me deu suporte na hora. Recomendo para todos que precisam de apoio imediato.",
-    name: "Thaís Moura",
-    /*crp: "",*/
-    image: "https://i.imgur.com/RiCNUWV.jpeg"
+    quote: "Sou residente e o app está me ajudando a ter mais autonomia na ultrassonografia.",
+    name: "— Vanessa A.",
+    crp: "R3 Clínica Médica",
+    image: "https://images.unsplash.com/photo-1680204437044-011a94496b4a"
   },
   {
-    quote: "Depois que conheci o SYD, nunca mais deixei minha saúde emocional de lado. Os psicólogos são excelentes e o atendimento é muito humano. A plataforma é simples, segura e funciona muito bem.",
-    name: "Bruna Almeida",
-    /*crp: "",*/
-    image: "https://i.imgur.com/4507tyO.jpeg"
+    quote: "Com o Celus, consigo revisar protocolos e emitir laudos no mesmo plantão, direto do celular.",
+    name: "Dr. Rafael L.",
+    crp: "Intensivista",
+    image: "https://images.unsplash.com/photo-1622902046580-2b47f47f5471"
   },
   {
-    quote: "A empresa onde trabalho contratou o SYD e foi um divisor de águas. Me senti acolhido em momentos difíceis e passei a ver o cuidado com a saúde mental com outros olhos. Atendimento rápido, sigiloso e de qualidade.",
-    name: "Camila Ferreira",
-    /*crp: "",*/
-    image: "https://i.imgur.com/mCLpyQD.jpeg"
+    quote: "Uso o app toda vez que estou no SAMU. É rápido, confiável e evita erros.",
+    name: "— Camila T.",
+    crp: "Paramédica",
+    image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2"
   },
   {
-    quote: "Gosto muito da liberdade de pagar por minuto. Sem compromisso, sem pressão, só entro quando realmente preciso. Já usei duas vezes e fui super bem atendida. Recomendo muito!",
-    name: "Rafaela Souza",
-    /*crp: "",*/
-    image: "https://i.imgur.com/R3VWDDC.jpeg"
+    quote: "GAntes eu precisava revisar tabelas e artigos a cada exame. Agora, com o Celus, consigo padronizar a avaliação em minutos e manter a confiança nos resultados.",
+    name: "Dra. Juliana Ferreira",
+    crp: "Ultrassonografista",
+    image: "https://images.unsplash.com/photo-1651008376811-b90baee60c1f"
   },
   {
-    quote: "Eu estava em crise de ansiedade numa madrugada e achei o SYD no Google. Em menos de 5 minutos estava conversando com uma psicóloga incrível. Nunca pensei que atendimento psicológico urgente fosse possível assim. Mudou minha vida!",
-    name: "Mariana Lopes",
-    /*crp: "",*/
-    image: "https://i.imgur.com/kbwztml.jpeg"
+    quote: "O Celus trouxe objetividade ao meu dia a dia. Além de facilitar o cálculo do TI-RADS, ele garante que nenhum critério importante passe despercebido.",
+    name: "Dr. Ricardo Menezes",
+    crp: "Médico Nuclear",
+    image: "https://images.unsplash.com/photo-1612349316228-5942a9b489c2"
   }
 ];
 
@@ -57,9 +57,19 @@ const Testimonials = () => {
   const currentTestimonial = testimonials[currentIndex];
 
   return (
-    <section className="w-full max-w-7xl mx-auto flex flex-col items-start self-stretch gap-8 py-16 lg:py-28 px-4 sm:px-6 lg:px-14 bg-white">
+    <section id="depoimentos" className="w-full max-w-7xl mx-auto flex flex-col items-start self-stretch gap-8 py-16 lg:py-28 px-4 sm:px-6 lg:px-14 bg-white">
       {/* Container */}
       <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+        {/* Image */}
+        <div className="w-full h-[640px] rounded-[8px] overflow-hidden order-first lg:order-last">
+          <img 
+            src={currentTestimonial.image} 
+            alt="Testimonial visual" 
+            className="w-full h-full object-cover transition-all duration-500" 
+          />
+        </div>
+
         {/* Content */}
         <div className="flex flex-col items-start gap-6 md:gap-8">
           {/* Stars */}
@@ -79,18 +89,10 @@ const Testimonials = () => {
           {/* Avatar */}
           <div className="flex flex-col items-start text-[hsl(var(--black))]">
             <span className="text-lg font-medium">{currentTestimonial.name}</span>
-            {/* <span className="text-sm">{currentTestimonial.crp}</span>*/}
+            <span className="text-sm">{currentTestimonial.crp}</span>
           </div>
         </div>
 
-        {/* Image */}
-        <div className="w-full order-first lg:order-last">
-          <img 
-            src={currentTestimonial.image} 
-            alt="Testimonial visual" 
-            className="w-full h-auto object-cover rounded-lg transition-all duration-500" 
-          />
-        </div>
       </div>
 
       {/* Navigation */}

@@ -20,19 +20,29 @@ const NotFound = () => {
     >
       <div className="text-center max-w-2xl mx-auto px-4">
         {/* Celus Logo */}
-        <div className="mb-8">
+        <div className="mb-6">
           <img
-            src="/assets/logo/logo_lp.svg"
+            src="/assets/logo/logo-header.svg"
             alt="Celus Logo"
-            className="w-40 h-auto mx-auto object-contain"
+            className="w-auto h-8 mx-auto object-contain"
           />
         </div>
         
         {/* Error Content */}
         <div className="bg-background rounded-2xl p-8 md:p-12 shadow-[0px_4px_16px_0px_rgba(0,0,0,0.04)]">
-          <h1 className="text-6xl md:text-8xl font-bold text-primary mb-6">404</h1>
-          <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4">Ops! Página não encontrada</h2>
-          <p className="text-quaternary text-lg mb-8 leading-relaxed">
+          <h1
+            className="text-6xl md:text-8xl font-bold text-primary mb-6"
+          >
+            404
+          </h1>
+          <h2
+            className="text-2xl md:text-3xl font-bold text-primary mb-4"
+          >
+            Página não encontrada
+          </h2>
+          <p
+            className="text-quaternary text-lg mb-8 leading-relaxed"
+          >
             A página que você está procurando não existe ou foi movida. 
             <br className="hidden sm:block" />
             Volte para a página inicial e continue navegando no Celus.
@@ -40,7 +50,11 @@ const NotFound = () => {
           
           {/* CTA Button */}
           <div className="flex justify-center">
-            <Button className="w-full sm:w-auto h-11 px-8 rounded-2xl bg-primary hover:bg-primary/90 border border-primary">
+            <Button
+              variant="primary"
+              size="xl"
+              className="w-full"
+            >
               <a
                 href="/"
                 className="text-white text-base font-bold"

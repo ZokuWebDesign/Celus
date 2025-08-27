@@ -19,12 +19,8 @@ const premiumFeatures = [
 ];
 
 const FeatureItem = ({ text }: { text: string }) => (
-  <li className="flex items-start gap-3">
-    <div className="flex-shrink-0 mt-0.5">
-      <div className="w-6 h-6 rounded-full bg-[#35b48b] flex items-center justify-center">
-        <Check size={14} className="text-white" />
-      </div>
-    </div>
+  <li className="flex items-center justify-start gap-3">
+    <img src="/assets/logo/logo-icon.svg" className="w-6 h-6" />
     <span className="text-[#101828] text-base leading-relaxed">
       {text}
     </span>
@@ -36,14 +32,14 @@ const Pricing = () => {
     <section id="planos" className="bg-white px-4 lg:px-16 py-12 lg:py-28">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
-        <div className="text-center mb-12 lg:mb-16">
+        <div className="text-center mb-12 lg:mb-16 max-w-4xl mx-auto">
           <p className="text-[#108b6a] font-semibold text-base mb-4">
             Planos e Preços
           </p>
-          <h2 className="text-[#108b6a] font-bold text-3xl lg:text-5xl leading-tight mb-6 max-w-4xl mx-auto">
+          <h2 className="text-[#108b6a] font-bold text-3xl lg:text-5xl leading-tight mb-6">
             Transforme seu celular em uma central clínica de decisões
           </h2>
-          <p className="text-[#101828] font-medium text-lg max-w-4xl mx-auto leading-relaxed">
+          <p className="text-[#101828] font-medium text-lg leading-relaxed">
             Tenha confiança no atendimento com acesso imediato a protocolos, laudos, calculadoras e resumos criados por especialistas.
           </p>
         </div>
@@ -51,7 +47,7 @@ const Pricing = () => {
         {/* Pricing Cards */}
         <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {/* Free Plan Card */}
-          <div className="bg-white rounded-lg border-2 border-gradient-to-b from-[#108b6a] to-[#35b78b] p-8 h-full flex flex-col">
+          <div className="bg-white rounded-[8px] border-2 border-primary p-8 h-full flex flex-col">
             {/* Header */}
             <div className="mb-8">
               <h3 className="text-[#101828] font-bold text-2xl mb-2">
@@ -62,10 +58,12 @@ const Pricing = () => {
               </p>
             </div>
 
+            <div className="border border-primary mb-8"/>
+
             {/* Price */}
             <div className="mb-8">
               <div className="mb-4">
-                <span className="text-[#141414] font-bold text-5xl lg:text-6xl">
+                <span className="text-primary font-bold text-5xl lg:text-6xl">
                   R$0,00
                 </span>
                 <span className="text-[#141414] text-xl ml-1">/mês</span>
@@ -93,7 +91,7 @@ const Pricing = () => {
           </div>
 
           {/* Premium Plan Card */}
-          <div className="bg-white rounded-lg border-2 border-gradient-to-b from-[#108b6a] to-[#35b78b] p-8 h-full flex flex-col">
+          <div className="bg-white rounded-[8px] border-2 border-primary px-6 py-8 h-full flex flex-col">
             {/* Header */}
             <div className="mb-8">
               <h3 className="text-[#101828] font-bold text-2xl mb-2">
@@ -104,10 +102,12 @@ const Pricing = () => {
               </p>
             </div>
 
+            <div className="border border-primary mb-8"/>
+
             {/* Price */}
             <div className="mb-8">
               <div className="mb-4">
-                <span className="text-[#141414] font-bold text-5xl lg:text-6xl">
+                <span className="text-primary font-bold text-5xl lg:text-6xl">
                   R$34,99
                 </span>
                 <span className="text-[#141414] text-xl ml-1">/mês</span>

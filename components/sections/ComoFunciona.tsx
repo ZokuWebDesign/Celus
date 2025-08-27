@@ -1,5 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
+import { Button } from "@/components/ui/button";
+import { STORE_LINKS } from "@/constants/links";
 
 const ComoFunciona = () => {
   const [activeCards, setActiveCards] = useState<boolean[]>(new Array(6).fill(false));
@@ -31,16 +33,16 @@ const ComoFunciona = () => {
 
   const features = [
     {
-      id: "medULTRA",
-      title: "MedULTRA",
+      id: "medUltra",
+      title: "MedUltra",
       description: "Acesse milhares de referências de medidas normais em exames de ultrassonografia.",
       hasImage: true,
-      imageUrl: "https://i.ibb.co/kLvr5mv/imagetwo.webp",
+      imageUrl: "https://images.unsplash.com/photo-1576091160550-2173dba999ef" /* https://i.ibb.co/7x2djYxG/medultra.webp */,
       cardHeight: "h-[484px]",
       imageHeight: "h-[280px]"
     },
     {
-      id: "calculUS1",
+      id: "calculUS",
       title: "CaluculUS",
       description: "Calculadoras inteligentes baseadas em sistemas de risco reconhecidos internacionalmente.",
       hasImage: false,
@@ -56,11 +58,11 @@ const ComoFunciona = () => {
       imageHeight: ""
     },
     {
-      id: "calculUS2",
-      title: "CaluculUS",
-      description: "Calculadoras inteligentes baseadas em sistemas de risco reconhecidos internacionalmente.",
+      id: "image",
+      title: "",
+      description: "",
       hasImage: true,
-      imageUrl: "https://i.ibb.co/kLvr5mv/imagetwo.webp",
+      imageUrl: "https://i.ibb.co/DfWnWKT9/resumus.webp",
       cardHeight: "h-[513px]",
       imageHeight: "h-[513px]"
     },
@@ -69,7 +71,7 @@ const ComoFunciona = () => {
       title: "LaudUS",
       description: "Mais de 200 modelos prontos de laudos de ultrassonografia Organizados por especialidade, órgão e patologia.",
       hasImage: true,
-      imageUrl: "https://i.ibb.co/kLvr5mv/imagetwo.webp",
+      imageUrl: "https://i.ibb.co/BV9VpQJN/laudus.webp",
       cardHeight: "h-[484px]",
       imageHeight: "h-[251px]"
     },
@@ -100,7 +102,7 @@ const ComoFunciona = () => {
         </div>
 
         {/* Features Grid */}
-        <div className="grid lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid lg:grid-cols-3 gap-6 mb-12">
           {/* Column 1 */}
           <div className="space-y-8">
             {/* MedULTRA Card */}
@@ -108,7 +110,7 @@ const ComoFunciona = () => {
               ref={(el: HTMLDivElement | null) => {
                 if (el) cardRefs.current[0] = el;
               }}
-              className={`${features[0].cardHeight} bg-white rounded-lg border-2 border-gradient-to-b from-[#108b6a] to-[#35b78b] overflow-hidden transition-all duration-1000 ${
+              className={`${features[0].cardHeight} bg-white rounded-[8px] border-2 border-primary overflow-hidden transition-all duration-1000 ${
                 activeCards[0] ? 'opacity-100 translate-y-0 shadow-lg' : 'opacity-70 translate-y-8'
               }`}
               style={{ transitionDelay: '0ms' }}
@@ -130,12 +132,12 @@ const ComoFunciona = () => {
               </div>
             </div>
 
-            {/* CaluculUS Card 1 */}
+            {/* CaluculUS Card */}
             <div 
               ref={(el: HTMLDivElement | null) => {
                 if (el) cardRefs.current[1] = el;
               }}
-              className={`${features[1].cardHeight} bg-white rounded-lg border-2 border-gradient-to-b from-[#108b6a] to-[#35b78b] overflow-hidden transition-all duration-1000 ${
+              className={`${features[1].cardHeight} bg-white rounded-[8px] border-2 border-primary overflow-hidden transition-all duration-1000 ${
                 activeCards[1] ? 'opacity-100 translate-y-0 shadow-lg' : 'opacity-70 translate-y-8'
               }`}
               style={{ transitionDelay: '200ms' }}
@@ -158,7 +160,7 @@ const ComoFunciona = () => {
               ref={(el: HTMLDivElement | null) => {
                 if (el) cardRefs.current[2] = el;
               }}
-              className={`${features[2].cardHeight} bg-white rounded-lg border-2 border-gradient-to-b from-[#108b6a] to-[#35b78b] overflow-hidden transition-all duration-1000 ${
+              className={`${features[2].cardHeight} bg-white rounded-[8px] border-2 border-primary overflow-hidden transition-all duration-1000 ${
                 activeCards[2] ? 'opacity-100 translate-y-0 shadow-lg' : 'opacity-70 translate-y-8'
               }`}
               style={{ transitionDelay: '400ms' }}
@@ -173,12 +175,12 @@ const ComoFunciona = () => {
               </div>
             </div>
 
-            {/* CaluculUS Card 2 (with image) */}
+            {/* Image Card */}
             <div 
               ref={(el: HTMLDivElement | null) => {
                 if (el) cardRefs.current[3] = el;
               }}
-              className={`${features[3].cardHeight} bg-white rounded-lg border-2 border-gradient-to-b from-[#108b6a] to-[#35b78b] overflow-hidden transition-all duration-1000 ${
+              className={`${features[3].cardHeight} rounded-[8px] border-2 border-primary overflow-hidden transition-all duration-1000 ${
                 activeCards[3] ? 'opacity-100 translate-y-0 shadow-lg' : 'opacity-70 translate-y-8'
               }`}
               style={{ transitionDelay: '600ms' }}
@@ -191,14 +193,6 @@ const ComoFunciona = () => {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="absolute bottom-0 left-0 right-0 bg-white p-8">
-                  <h3 className="text-[#35b48b] font-bold text-2xl lg:text-3xl mb-4">
-                    {features[3].title}
-                  </h3>
-                  <p className="text-[#101828] text-lg leading-relaxed">
-                    {features[3].description}
-                  </p>
-                </div>
               </div>
             </div>
           </div>
@@ -210,7 +204,7 @@ const ComoFunciona = () => {
               ref={(el: HTMLDivElement | null) => {
                 if (el) cardRefs.current[4] = el;
               }}
-              className={`${features[4].cardHeight} bg-white rounded-lg border-2 border-gradient-to-b from-[#108b6a] to-[#35b78b] overflow-hidden transition-all duration-1000 ${
+              className={`${features[4].cardHeight} bg-white rounded-[8px] border-2 border-primary overflow-hidden transition-all duration-1000 ${
                 activeCards[4] ? 'opacity-100 translate-y-0 shadow-lg' : 'opacity-70 translate-y-8'
               }`}
               style={{ transitionDelay: '800ms' }}
@@ -237,7 +231,7 @@ const ComoFunciona = () => {
               ref={(el: HTMLDivElement | null) => {
                 if (el) cardRefs.current[5] = el;
               }}
-              className={`${features[5].cardHeight} bg-white rounded-lg border-2 border-gradient-to-b from-[#108b6a] to-[#35b78b] overflow-hidden transition-all duration-1000 ${
+              className={`${features[5].cardHeight} bg-white rounded-[8px] border-2 border-primary overflow-hidden transition-all duration-1000 ${
                 activeCards[5] ? 'opacity-100 translate-y-0 shadow-lg' : 'opacity-70 translate-y-8'
               }`}
               style={{ transitionDelay: '1000ms' }}
@@ -256,9 +250,18 @@ const ComoFunciona = () => {
 
         {/* CTA Button */}
         <div className="text-center">
-          <button className="bg-[#108b6a] text-white font-bold text-lg px-12 py-4 rounded-lg hover:bg-[#0e7a5d] transition-colors duration-200">
-            Quero testar gratuitamente
-          </button>
+          <Button
+            variant="primary"
+            size="xl"
+            className="w-[374px]"
+          >
+            <a
+              href={STORE_LINKS.APP_STORE}
+              className="w-full"
+            >
+              Quero testar gratuitamente
+            </a>
+          </Button>
         </div>
       </div>
     </section>

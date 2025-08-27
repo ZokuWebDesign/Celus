@@ -8,6 +8,7 @@ import {
   Clock, 
   FileX 
 } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 const FeatureImageOne = () => {
   const leftColumnStats = [
@@ -47,7 +48,7 @@ const FeatureImageOne = () => {
   ];
 
   return (
-    <section id='precisao-agilidade' className="bg-white px-4 lg:px-16 py-12 lg:py-28">
+    <section id='problema' className="bg-white px-4 lg:px-16 py-12 lg:py-28">
       <div className="max-w-7xl mx-auto">
         {/* Section Title */}
         <div className="text-center mb-12 lg:mb-16">
@@ -86,14 +87,11 @@ const FeatureImageOne = () => {
 
           {/* Center - Phone Image */}
           <div className="flex-1 max-w-[466px] relative">
-            <div className="relative">
-              <img
-                src="https://i.ibb.co/wFWsX3Xk/imageone.webp"
-                alt="Celus App Interface"
-                className="w-full h-auto rounded-2xl"
-              />
-              <div className="absolute inset-0 rounded-2xl border-2 border-gradient-to-b from-primary to-[#35b78b]"></div>
-            </div>
+            <img
+              src="https://i.ibb.co/wrLHbXSF/comofunciona.webp"
+              alt="Celus App Interface"
+              className="w-full h-auto rounded-2xl"
+            />
           </div>
 
           {/* Right Column - Statistics */}
@@ -119,9 +117,13 @@ const FeatureImageOne = () => {
 
         {/* CTA Button */}
         <div className="text-center">
-          <button className="bg-primary text-white font-bold text-lg px-8 py-4 rounded-lg hover:bg-[#0e7a5d] transition-colors duration-200">
+          <Button
+            variant='primary'
+            size='xl'
+            className='w-[324px]'
+          >
             Baixar agora
-          </button>
+          </Button>
         </div>
       </div>
     </section>

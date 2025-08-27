@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils"
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "primary" | "secondary" | "outline"
-  size?: "default" | "sm" | "lg" | "icon" | "xl" | "xxl"
+  size?: "default" | "sm" | "md" | "lg" | "xl" | "xxl" | "icon"
   asChild?: boolean
 }
 
@@ -16,10 +16,11 @@ const buttonVariants = {
   },
   size: {
     default: "h-11 px-4 py-2",
-    sm: "h-9 rounded-md px-3",
-    lg: "h-11 rounded-md px-8", 
-    xl: "h-12 rounded-lg px-8 text-base font-bold",
-    xxl: "h-[60px] rounded-xl px-10 text-lg font-bold",
+    sm: "h-9 rounded-[8px] px-3",
+    md: "h-11 rounded-[8px] px-[16px]",
+    lg: "h-12 rounded-[8px] px-[16px]", 
+    xl: "h-[52px] rounded-[8px] px-[18px] text-base font-bold",
+    xxl: "h-[60px] rounded-xl px-[18px] text-lg font-bold",
     icon: "h-10 w-10",
   },
 }

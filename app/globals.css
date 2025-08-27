@@ -40,7 +40,7 @@
 
   @media (prefers-color-scheme: dark) {
     :root {
-      --background: 220 20% 6%;
+      --background: 0 0% 100%;
       --foreground: 0 0% 93%;
 
       --primary: 161 55% 46%;
@@ -48,8 +48,8 @@
       --secondary: 164 79% 30%;
       --secondary-foreground: 0 0% 98%;
       --stroke: 220 5% 15%;
-      --primary-text: 0 0% 97%;
-      --secondary-text: 220 4% 60%;
+      --primary-text: 221 43% 11%;
+      --secondary-text: 221 43% 11%;
       --success: 153 91% 30%;
       --warning: 28 97% 44%;
       --error: 4 74% 49%;

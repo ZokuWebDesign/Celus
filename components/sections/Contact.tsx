@@ -142,7 +142,8 @@ const Contact = () => {
               {/* Submit Button */}
               <Button 
                 type="submit" 
-                className="w-full h-12 bg-[#108b6a] hover:bg-[#0e7a5d] text-white font-bold text-lg rounded-lg transition-colors duration-200"
+                size="lg"
+                className="w-full"
                 disabled={isSubmitting}
               >
                 {isSubmitting ? 'Enviando...' : 'Enviar mensagem'}

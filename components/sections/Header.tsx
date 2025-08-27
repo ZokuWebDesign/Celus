@@ -3,6 +3,7 @@ import { useIsMobile } from "@/hooks/use-mobile";
 import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { useScrollDirection } from "@/hooks/useScrollDirection";
+import { STORE_LINKS } from "@/constants/links";
 
 const Header = () => {
   const isMobile = useIsMobile();
@@ -12,7 +13,7 @@ const Header = () => {
 
   const navigationItems = [
     { name: "Início", href: "#inicio" },
-    { name: "Funcionalidades", href: "#funcionalidades" },
+    { name: "Como funciona", href: "#como-funciona" },
     { name: "Depoimentos", href: "#depoimentos" },
     { name: "Planos", href: "#planos" },
     { name: "FAQ", href: "#faq" },
@@ -38,22 +39,23 @@ const Header = () => {
   return (
     <>
       <header 
-        className={`sticky top-0 bg-white shadow-sm z-30 transition-transform duration-300 ${
+        className={`sticky top-0 bg-white shadow-sm z-30 transition-transform duration-300 z-50 ${
           isVisible ? 'translate-y-0' : '-translate-y-full'
         }`}
       >
         <div className="max-w-[1280px] mx-auto">
           <div className="flex justify-between items-center px-4 lg:px-[72px] py-4">
             {/* Logo */}
-            <div className={`${isMobile ? 'h-8 w-[120px]' : 'h-12 w-[180px]'}`}>
+            <div className={`${isMobile ? 'h-8 w-[103px]' : 'h-12 w-[154px]'}`}>
               <a 
                 href="#inicio"
                 className="w-full h-full flex items-center"
               >
-                <div className="w-10 h-10 bg-[#35b48b] rounded-lg flex items-center justify-center">
-                  <div className="w-6 h-6 bg-white rounded-full"></div>
-                </div>
-                <span className="ml-3 text-xl font-bold text-[#108b6a]">Celus</span>
+                <img 
+                  src="/assets/logo/logo-header.svg" 
+                  alt="Celus Logo" 
+                  className="w-full h-full object-contain"
+                />
               </a>
             </div>
 
@@ -75,16 +77,34 @@ const Header = () => {
 
             {/* Desktop CTA */}
             {!isMobile && (
-              <Button className="bg-[#108b6a] hover:bg-[#0d7456] text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200">
-                Baixe agora
+              <Button
+                variant="primary"
+                size="md"
+                className="w-[160px]"
+              >
+                <a
+                  href={STORE_LINKS.APP_STORE}
+                  className="w-full"
+                >
+                  Baixe agora
+                </a>
               </Button>
             )}
 
             {/* Mobile Actions */}
             {isMobile && (
               <div className="flex items-center gap-3">
-                <Button className="bg-[#108b6a] hover:bg-[#0d7456] text-white px-4 py-2 rounded-lg text-sm font-semibold">
-                  Baixar
+                <Button
+                  variant="primary"
+                  size="md"
+                  className="w-[120px]"
+                >
+                  <a
+                    href={STORE_LINKS.APP_STORE}
+                    className="w-full"
+                  >
+                    Baixar
+                  </a>
                 </Button>
                 <button
                   onClick={() => setIsMobileMenuOpen(true)}
@@ -111,11 +131,17 @@ const Header = () => {
             <div className="flex flex-col">
               {/* Mobile Menu Header */}
               <div className="flex items-center justify-between mb-6">
-                <div className="flex items-center">
-                  <div className="w-8 h-8 bg-[#35b48b] rounded-lg flex items-center justify-center">
-                    <div className="w-5 h-5 bg-white rounded-full"></div>
-                  </div>
-                  <span className="ml-2 text-lg font-bold text-[#108b6a]">Celus</span>
+                <div className="h-8 w-[103px]">
+                  <a 
+                    href="#inicio"
+                    className="w-full h-full flex items-center"
+                  >
+                    <img 
+                      src="/assets/logo/logo-header.svg" 
+                      alt="Celus Logo" 
+                      className="w-full h-full object-contain"
+                    />
+                  </a>
                 </div>
                 <button
                   onClick={() => setIsMobileMenuOpen(false)}
@@ -146,8 +172,18 @@ const Header = () => {
 
               {/* Mobile CTA Section */}
               <div className="mt-6 pt-6 border-t border-gray-100">
-                <Button className="w-full bg-[#108b6a] hover:bg-[#0d7456] text-white py-3 rounded-xl font-semibold">
-                  Baixe agora
+                <Button
+                  variant="primary"
+                  size="xl"
+                  className="w-full"
+                >
+                  <a
+                    href={STORE_LINKS.APP_STORE}
+                    className="w-full"
+
+                  >
+                      Baixe agora
+                  </a>
                 </Button>
               </div>
             </div>

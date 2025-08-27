@@ -99,8 +99,8 @@ const CookiesPage = () => {
         <div className="mt-8">
           <Button
             onClick={() => window.history.back()}
-            variant="outline"
-            className="w-full sm:w-auto"
+            variant="primary"
+            className="w-full sm:w-[224px]"
           >
             Voltar
           </Button>
