@@ -3,7 +3,7 @@ import { STORE_LINKS } from "@/constants/links";
 
 const AppDownload = () => {
   return (
-    <section id="app-download" className="max-w-7xl mx-auto bg-white px-4 lg:pl-14 lg:pr-6 lg:pt-[74px] lg:pb-28">
+    <section id="app-download" className="max-w-7xl mx-auto bg-white px-4 py-12 lg:pl-14 lg:pr-6 lg:pt-[74px] lg:pb-28">
       <div className="flex flex-col lg:flex-row gap-4 items-center">
         {/* Content Section */}
         <div className="max-w-[674px]">
@@ -20,7 +20,7 @@ const AppDownload = () => {
             </p>
           </div>
           {/* Download Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col md:flex-row justify-center lg:justify-start items-center gap-4">
             {/* App Store Button */}
             <a
               href={STORE_LINKS.APP_STORE}
@@ -44,7 +44,7 @@ const AppDownload = () => {
           </div>
         </div>
         {/* Image Section */}
-        <div className="w-full max-w-[510px] h-[343px] lg:h-[716px] relative">
+        <div className="w-full max-w-[510px] max-h-[716px] pt-8 lg:pt-0 relative">
             <img
               src="https://i.ibb.co/8ny97W07/app-download.webp"
               alt="Celus App on Mobile"

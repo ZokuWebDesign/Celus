@@ -66,7 +66,7 @@ const Header = () => {
                   <a
                     key={index}
                     href={item.href}
-                    className="text-[#475467] hover:text-primary text-sm transition-colors duration-200 relative group"
+                    className="text-quaternary hover:text-primary text-sm transition-colors duration-200 relative group"
                   >
                     {item.name}
                     <div className="absolute bottom-[-8px] left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-primary rounded-full transition-all duration-200 group-hover:w-full"></div>
@@ -108,7 +108,7 @@ const Header = () => {
                 </Button>
                 <button
                   onClick={() => setIsMobileMenuOpen(true)}
-                  className="flex items-center justify-center w-8 h-8 text-[#475467]"
+                  className="flex items-center justify-center w-8 h-8 text-quaternary"
                 >
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M3 12H21M3 6H21M3 18H21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -145,7 +145,7 @@ const Header = () => {
                 </div>
                 <button
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="w-8 h-8 text-[#475467] hover:text-primary transition-colors"
+                  className="w-8 h-8 text-quaternary hover:text-primary transition-colors"
                 >
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -160,7 +160,7 @@ const Header = () => {
                     key={index}
                     href={item.href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="flex items-center justify-between w-full px-4 py-3 rounded-xl bg-[#f8fffe] hover:bg-[#edfcf6] text-[#475467] hover:text-primary font-medium transition-colors duration-200"
+                    className="flex items-center justify-between w-full px-4 py-3 rounded-xl bg-[#f8fffe] hover:bg-[#edfcf6] text-quaternary hover:text-primary font-medium transition-colors duration-200"
                   >
                     {item.name}
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

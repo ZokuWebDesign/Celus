@@ -18,6 +18,8 @@
     --secondary-foreground: 0 0% 98%;
     --tertiary: 221 43% 11%;
     --tertiary-foreground: 0 0% 98%;
+    --quaternary: 216 18% 34%;
+    --quaternary-foreground: 0 0% 98%;
     --success: 142 76% 36%;
     --warning: 38 92% 50%;
     --error: 0 84% 60%;
@@ -48,6 +50,8 @@
       --secondary-foreground: 0 0% 98%;
       --tertiary: 221 43% 11%;
       --tertiary-foreground: 0 0% 98%;
+      --quaternary: 216 18% 34%;
+      --quaternary-foreground: 0 0% 98%;
       --success: 153 91% 30%;
       --warning: 28 97% 44%;
       --error: 4 74% 49%;
@@ -111,5 +115,22 @@ p {
 
   .btn-secondary {
     @apply bg-secondary text-quaternary-foreground hover:bg-secondary/80 rounded-2xl px-4 py-2 font-semibold transition-colors;
+  }
+
+  /* Hero responsive background */
+  .hero-bg {
+    background-image: var(--bg-mobile);
+  }
+
+  @media (min-width: 1024px) {
+    .hero-bg {
+      background-image: var(--bg-lg);
+    }
+  }
+
+  @media (min-width: 1536px) {
+    .hero-bg {
+      background-image: var(--bg-2xl);
+    }
   }
 }

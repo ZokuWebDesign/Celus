@@ -48,7 +48,7 @@ const FeatureImageOne = () => {
   ];
 
   return (
-    <section id='problema' className="bg-white px-4 lg:px-16 py-12 lg:py-28">
+    <section id='problema' className="bg-white px-4 md:px-12 lg:px-16 py-12 lg:py-28">
       <div className="max-w-7xl mx-auto">
         {/* Section Title */}
         <div className="text-center mb-12 lg:mb-16">

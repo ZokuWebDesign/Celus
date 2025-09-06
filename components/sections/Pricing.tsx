@@ -53,7 +53,7 @@ const Pricing = () => {
               <h3 className="text-tertiary font-bold text-2xl mb-2">
                 Gratuito
               </h3>
-              <p className="text-[#475467] text-base leading-relaxed">
+              <p className="text-quaternary text-base leading-relaxed">
                 Ideal para estudantes e iniciantes. Resumos e acessos limitados, ferramentas básicas.
               </p>
             </div>
@@ -68,7 +68,7 @@ const Pricing = () => {
                 </span>
                 <span className="text-[#141414] text-xl ml-1">/mês</span>
               </div>
-              <p className="text-[#475467] text-base">
+              <p className="text-quaternary text-base">
                 Com o plano gratuito, você já começa a ganhar autonomia.
               </p>
             </div>
@@ -97,7 +97,7 @@ const Pricing = () => {
               <h3 className="text-tertiary font-bold text-2xl mb-2">
                 Premium
               </h3>
-              <p className="text-[#475467] text-base leading-relaxed">
+              <p className="text-quaternary text-base leading-relaxed">
                 Ideal para profissionais ativos. Todas as funcionalidades desbloqueadas, atualizações frequentes.
               </p>
             </div>
@@ -112,7 +112,7 @@ const Pricing = () => {
                 </span>
                 <span className="text-[#141414] text-xl ml-1">/mês</span>
               </div>
-              <p className="text-[#475467] text-base">
+              <p className="text-quaternary text-base">
                 Com o plano premium, você desbloqueia o verdadeiro potencial.
               </p>
             </div>

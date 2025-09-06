@@ -25,7 +25,7 @@ const testimonials = [
     image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2"
   },
   {
-    quote: "GAntes eu precisava revisar tabelas e artigos a cada exame. Agora, com o Celus, consigo padronizar a avaliação em minutos e manter a confiança nos resultados.",
+    quote: "Antes eu precisava revisar tabelas e artigos a cada exame. Agora, com o Celus, consigo padronizar a avaliação em minutos e manter a confiança nos resultados.",
     name: "Dra. Juliana Ferreira",
     crp: "Ultrassonografista",
     image: "https://images.unsplash.com/photo-1651008376811-b90baee60c1f"
@@ -57,16 +57,16 @@ const Testimonials = () => {
   const currentTestimonial = testimonials[currentIndex];
 
   return (
-    <section id="depoimentos" className="w-full max-w-7xl mx-auto flex flex-col items-start self-stretch gap-8 py-16 lg:py-28 px-4 sm:px-6 lg:px-14 bg-white">
+    <section id="depoimentos" className="w-full max-w-7xl mx-auto flex flex-col items-start self-stretch gap-8 py-16 lg:py-28 px-4 md:px-12 lg:px-14 bg-white">
       {/* Container */}
       <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
         {/* Image */}
-        <div className="w-full h-[640px] rounded-[8px] overflow-hidden order-first lg:order-last">
+        <div className="w-full h-[343px] lg:h-[640px] rounded-[8px] overflow-hidden order-first lg:order-last">
           <img 
             src={currentTestimonial.image} 
             alt="Testimonial visual" 
-            className="w-full h-full object-cover transition-all duration-500" 
+            className="w-full h-full object-contain lg:object-cover transition-all duration-500" 
           />
         </div>
 

@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { Checkbox } from "../ui/checkbox";
 import { toast } from "sonner";
 
 const Contact = () => {
@@ -56,7 +57,7 @@ const Contact = () => {
   return (
     <section id="contato" className="bg-[#fbfcfd] px-4 lg:px-16 py-12 lg:py-28">
       <div className="max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 justify-center items-start">
           {/* Form Section */}
           <div className="max-w-[532px]">
             {/* Header */}
@@ -86,7 +87,7 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleInputChange}
                   placeholder="Digite seu nome"
-                  className="h-12 border-[#d0d5dd] rounded-lg bg-white"
+                  className="h-12"
                   required
                 />
               </div>
@@ -103,7 +104,7 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleInputChange}
                   placeholder="Digite seu e-mail"
-                  className="h-12 border-[#d0d5dd] rounded-lg bg-white"
+                  className="h-12"
                   required
                 />
               </div>
@@ -119,19 +120,18 @@ const Contact = () => {
                   value={formData.message}
                   onChange={handleInputChange}
                   placeholder="Digite sua mensagem..."
-                  className="min-h-[128px] resize-none border-[#d0d5dd] rounded-lg bg-white"
+                  className="min-h-[128px] resize-none"
                   required
                 />
               </div>
 
               {/* Checkbox */}
               <div className="flex items-start gap-3">
-                <input
+                <Checkbox
                   type="checkbox"
                   id="terms"
                   checked={isAgreed}
                   onChange={(e) => setIsAgreed(e.target.checked)}
-                  className="mt-1 w-5 h-5 text-primary border-[#d0d5dd] rounded focus:ring-primary focus:ring-2"
                   required
                 />
                 <label htmlFor="terms" className="text-[#344054] text-sm leading-relaxed">
@@ -152,7 +152,7 @@ const Contact = () => {
           </div>
 
           {/* Image Section */}
-          <div className="max-w-[532px] h-[745px] lg:h-full">
+          <div className="max-w-[532px] h-[343px] lg:h-full">
             <div className="relative h-full rounded-[56px] border-2 border-gradient-to-b from-primary to-[#35b78b] shadow-lg overflow-hidden">
               <img
                 src="https://plus.unsplash.com/premium_photo-1658506671316-0b293df7c72b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"

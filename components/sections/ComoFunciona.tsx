@@ -86,7 +86,7 @@ const ComoFunciona = () => {
   ];
 
   return (
-    <section id="como-funciona" className="bg-[#edfcf6] px-4 lg:px-16 py-12 lg:py-28">
+    <section id="como-funciona" className="bg-[#edfcf6] px-4 md:px-12 lg:px-16 py-12 lg:py-28">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-12 lg:mb-16">
@@ -102,7 +102,7 @@ const ComoFunciona = () => {
         </div>
 
         {/* Features Grid */}
-        <div className="grid lg:grid-cols-3 gap-6 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {/* Column 1 */}
           <div className="space-y-8">
             {/* MedULTRA Card */}
@@ -198,7 +198,7 @@ const ComoFunciona = () => {
           </div>
 
           {/* Column 3 */}
-          <div className="space-y-8">
+          <div className="space-y-8 block md:hidden lg:block">
             {/* LaudUS Card */}
             <div 
               ref={(el: HTMLDivElement | null) => {
@@ -253,7 +253,7 @@ const ComoFunciona = () => {
           <Button
             variant="primary"
             size="xl"
-            className="w-[374px]"
+            className="w-full md:w-[374px]"
           >
             <a
               href={STORE_LINKS.APP_STORE}
