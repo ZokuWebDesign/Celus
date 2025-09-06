@@ -61,13 +61,13 @@ const Contact = () => {
           <div className="max-w-[532px]">
             {/* Header */}
             <div className="mb-12">
-              <p className="text-[#108b6a] font-semibold text-base mb-4">
+              <p className="text-primary font-semibold text-base mb-4">
                 Contato
               </p>
-              <h2 className="text-[#108b6a] font-bold text-3xl lg:text-5xl leading-tight mb-6">
+              <h2 className="text-primary font-bold text-3xl lg:text-5xl leading-tight mb-6">
                 Entre em contato
               </h2>
-              <p className="text-[#101828] font-medium text-lg leading-relaxed">
+              <p className="text-tertiary font-medium text-lg leading-relaxed">
                 Tem dúvidas sobre os planos? Quer saber mais sobre como o Celus pode ajudar no seu dia a dia clínico? Preencha o formulário abaixo e fale com a nossa equipe.
               </p>
             </div>
@@ -131,7 +131,7 @@ const Contact = () => {
                   id="terms"
                   checked={isAgreed}
                   onChange={(e) => setIsAgreed(e.target.checked)}
-                  className="mt-1 w-5 h-5 text-[#108b6a] border-[#d0d5dd] rounded focus:ring-[#108b6a] focus:ring-2"
+                  className="mt-1 w-5 h-5 text-primary border-[#d0d5dd] rounded focus:ring-primary focus:ring-2"
                   required
                 />
                 <label htmlFor="terms" className="text-[#344054] text-sm leading-relaxed">
@@ -153,7 +153,7 @@ const Contact = () => {
 
           {/* Image Section */}
           <div className="max-w-[532px] h-[745px] lg:h-full">
-            <div className="relative h-full rounded-[56px] border-2 border-gradient-to-b from-[#108b6a] to-[#35b78b] shadow-lg overflow-hidden">
+            <div className="relative h-full rounded-[56px] border-2 border-gradient-to-b from-primary to-[#35b78b] shadow-lg overflow-hidden">
               <img
                 src="https://plus.unsplash.com/premium_photo-1658506671316-0b293df7c72b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Celus Contact"

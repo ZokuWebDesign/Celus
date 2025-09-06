@@ -31,7 +31,7 @@ const AccordionTrigger = React.forwardRef<
       {...props}
     >
       <div className="flex-1 text-left">
-        <span className="text-lg font-medium text-[#101828] leading-[140%]">
+        <span className="text-lg font-medium text-tertiary leading-[140%]">
           {children}
         </span>
       </div>
@@ -107,7 +107,7 @@ const AccordionContent = React.forwardRef<
     
     {/* Content */}
     <div className={cn("py-4 px-6", className)}>
-      <div className="text-base font-normal text-[#101828] leading-[160%]">
+      <div className="text-base font-normal text-tertiary leading-[160%]">
         {children}
       </div>
     </div>

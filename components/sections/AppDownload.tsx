@@ -9,13 +9,13 @@ const AppDownload = () => {
         <div className="max-w-[674px]">
           {/* Title */}
           <div className="mb-12">
-            <h2 className="text-[#108b6a] font-bold text-3xl lg:text-5xl leading-tight mb-6">
+            <h2 className="text-primary font-bold text-3xl lg:text-5xl leading-tight mb-6">
               Decida com mais segurança, em menos tempo, direto do celular
             </h2>
-            <p className="text-[#101828] font-medium text-lg leading-relaxed mb-4">
+            <p className="text-tertiary font-medium text-lg leading-relaxed mb-4">
               Baixe o Celus e leve protocolos, laudos e calculadoras médicas com você, direto no seu bolso.
             </p>
-            <p className="text-[#101828] font-medium text-lg leading-relaxed">
+            <p className="text-tertiary font-medium text-lg leading-relaxed">
               Tenha tudo o que você precisa no ponto de atendimento. Sem papel. Sem perder tempo. Sem depender de internet o tempo todo.
             </p>
           </div>

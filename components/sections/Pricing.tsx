@@ -21,7 +21,7 @@ const premiumFeatures = [
 const FeatureItem = ({ text }: { text: string }) => (
   <li className="flex items-center justify-start gap-3">
     <img src="/assets/logo/logo-icon.svg" className="w-6 h-6" />
-    <span className="text-[#101828] text-base leading-relaxed">
+    <span className="text-tertiary text-base leading-relaxed">
       {text}
     </span>
   </li>
@@ -33,13 +33,13 @@ const Pricing = () => {
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-12 lg:mb-16 max-w-4xl mx-auto">
-          <p className="text-[#108b6a] font-semibold text-base mb-4">
+          <p className="text-primary font-semibold text-base mb-4">
             Planos e Preços
           </p>
-          <h2 className="text-[#108b6a] font-bold text-3xl lg:text-5xl leading-tight mb-6">
+          <h2 className="text-primary font-bold text-3xl lg:text-5xl leading-tight mb-6">
             Transforme seu celular em uma central clínica de decisões
           </h2>
-          <p className="text-[#101828] font-medium text-lg leading-relaxed">
+          <p className="text-tertiary font-medium text-lg leading-relaxed">
             Tenha confiança no atendimento com acesso imediato a protocolos, laudos, calculadoras e resumos criados por especialistas.
           </p>
         </div>
@@ -50,7 +50,7 @@ const Pricing = () => {
           <div className="bg-white rounded-[8px] border-2 border-primary p-8 h-full flex flex-col">
             {/* Header */}
             <div className="mb-8">
-              <h3 className="text-[#101828] font-bold text-2xl mb-2">
+              <h3 className="text-tertiary font-bold text-2xl mb-2">
                 Gratuito
               </h3>
               <p className="text-[#475467] text-base leading-relaxed">
@@ -75,7 +75,7 @@ const Pricing = () => {
 
             {/* CTA Button */}
             <div className="mb-8">
-              <button className="w-full bg-[#108b6a] text-white font-bold text-lg py-4 rounded-lg hover:bg-[#0e7a5d] transition-colors duration-200">
+              <button className="w-full bg-primary text-white font-bold text-lg py-4 rounded-lg hover:bg-[#0e7a5d] transition-colors duration-200">
                 Quero testar gratuitamente
               </button>
             </div>
@@ -94,7 +94,7 @@ const Pricing = () => {
           <div className="bg-white rounded-[8px] border-2 border-primary px-6 py-8 h-full flex flex-col">
             {/* Header */}
             <div className="mb-8">
-              <h3 className="text-[#101828] font-bold text-2xl mb-2">
+              <h3 className="text-tertiary font-bold text-2xl mb-2">
                 Premium
               </h3>
               <p className="text-[#475467] text-base leading-relaxed">
@@ -119,7 +119,7 @@ const Pricing = () => {
 
             {/* CTA Button */}
             <div className="mb-8">
-              <button className="w-full bg-[#108b6a] text-white font-bold text-lg py-4 rounded-lg hover:bg-[#0e7a5d] transition-colors duration-200">
+              <button className="w-full bg-primary text-white font-bold text-lg py-4 rounded-lg hover:bg-[#0e7a5d] transition-colors duration-200">
                 Assinar plano premium
               </button>
             </div>

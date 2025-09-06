@@ -90,13 +90,13 @@ const ComoFunciona = () => {
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-12 lg:mb-16">
-          <p className="text-[#108b6a] font-semibold text-base mb-4">
+          <p className="text-primary font-semibold text-base mb-4">
             Economia de Tempo Clínico
           </p>
-          <h2 className="text-[#108b6a] font-bold text-3xl lg:text-5xl leading-tight mb-6 max-w-4xl mx-auto">
+          <h2 className="text-primary font-bold text-3xl lg:text-5xl leading-tight mb-6 max-w-4xl mx-auto">
             Celus coloca conteúdo validado e ferramentas de decisão na palma da sua mão
           </h2>
-          <p className="text-[#101828] font-medium text-lg max-w-4xl mx-auto leading-relaxed">
+          <p className="text-tertiary font-medium text-lg max-w-4xl mx-auto leading-relaxed">
             Celus oferece tudo que você precisa para cuidar da sua saúde física e prevenir problemas futuros, com recursos inovadores e personalizados para cada necessidade.
           </p>
         </div>
@@ -123,10 +123,10 @@ const ComoFunciona = () => {
                 />
               </div>
               <div className="p-8">
-                <h3 className="text-[#108b6a] font-bold text-2xl lg:text-3xl mb-4">
+                <h3 className="text-primary font-bold text-2xl lg:text-3xl mb-4">
                   {features[0].title}
                 </h3>
-                <p className="text-[#101828] text-lg leading-relaxed">
+                <p className="text-tertiary text-lg leading-relaxed">
                   {features[0].description}
                 </p>
               </div>
@@ -143,10 +143,10 @@ const ComoFunciona = () => {
               style={{ transitionDelay: '200ms' }}
             >
               <div className="p-8 h-full flex flex-col justify-center">
-                <h3 className="text-[#108b6a] font-bold text-2xl lg:text-3xl mb-4">
+                <h3 className="text-primary font-bold text-2xl lg:text-3xl mb-4">
                   {features[1].title}
                 </h3>
-                <p className="text-[#101828] text-lg leading-relaxed">
+                <p className="text-tertiary text-lg leading-relaxed">
                   {features[1].description}
                 </p>
               </div>
@@ -166,10 +166,10 @@ const ComoFunciona = () => {
               style={{ transitionDelay: '400ms' }}
             >
               <div className="p-8 h-full flex flex-col justify-center">
-                <h3 className="text-[#108b6a] font-bold text-2xl lg:text-3xl mb-4">
+                <h3 className="text-primary font-bold text-2xl lg:text-3xl mb-4">
                   {features[2].title}
                 </h3>
-                <p className="text-[#101828] text-lg leading-relaxed">
+                <p className="text-tertiary text-lg leading-relaxed">
                   {features[2].description}
                 </p>
               </div>
@@ -217,10 +217,10 @@ const ComoFunciona = () => {
                 />
               </div>
               <div className="p-8">
-                <h3 className="text-[#108b6a] font-bold text-2xl lg:text-3xl mb-4">
+                <h3 className="text-primary font-bold text-2xl lg:text-3xl mb-4">
                   {features[4].title}
                 </h3>
-                <p className="text-[#101828] text-lg leading-relaxed">
+                <p className="text-tertiary text-lg leading-relaxed">
                   {features[4].description}
                 </p>
               </div>
@@ -237,10 +237,10 @@ const ComoFunciona = () => {
               style={{ transitionDelay: '1000ms' }}
             >
               <div className="p-8 h-full flex flex-col justify-center">
-                <h3 className="text-[#108b6a] font-bold text-2xl lg:text-3xl mb-4">
+                <h3 className="text-primary font-bold text-2xl lg:text-3xl mb-4">
                   {features[5].title}
                 </h3>
-                <p className="text-[#101828] text-lg leading-relaxed">
+                <p className="text-tertiary text-lg leading-relaxed">
                   {features[5].description}
                 </p>
               </div>

@@ -33,12 +33,12 @@ export default {
 					foreground: 'hsl(var(--secondary-foreground))'
 				},
 				tertiary : {
-					DEFAULT: 'hsl(var(--primary-text))',
-					foreground: 'hsl(var(--primary-text))'
+					DEFAULT: 'hsl(var(--tertiary))',
+					foreground: 'hsl(var(--tertiary-foreground))'
 				},
 				quaternary: {
-					DEFAULT: 'hsl(var(--secondary-text))',
-					foreground: 'hsl(var(--secondary-text))'
+					DEFAULT: 'hsl(var(--quaternary))',
+					foreground: 'hsl(var(--quaternary-foreground))'
 				},
 				text: {
 					DEFAULT: 'hsl(var(--primary-text))',

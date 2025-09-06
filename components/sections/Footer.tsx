@@ -12,10 +12,10 @@ const Footer = () => {
 
         {/* Main Content */}
         <div className="text-center">
-          <h2 className="text-lg font-bold text-[#108b6a]">
+          <h2 className="text-lg font-bold text-primary">
             Criado para quem vive a prática clínica.
           </h2>
-          <p className="text-base text-[#101828] max-w-[680px] mx-auto leading-relaxed">
+          <p className="text-base text-tertiary max-w-[680px] mx-auto leading-relaxed">
             No Celus, acreditamos que decisões mais rápidas e seguras começam com acesso ao conteúdo certo. Por isso, desenvolvemos um app pensado por profissionais de saúde, para profissionais de saúde — com foco em agilidade, precisão e autonomia no ponto de atendimento.
           </p>
         </div>
@@ -36,13 +36,13 @@ const Footer = () => {
             </p>
             
             <div className="flex flex-wrap justify-center lg:justify-end gap-6">
-              <a href="/politica" className="text-sm text-[#475467] hover:text-[#108b6a] transition-colors">
+              <a href="/politica" className="text-sm text-[#475467] hover:text-primary transition-colors">
                 Política de Privacidade
               </a>
-              <a href="/termos" className="text-sm text-[#475467] hover:text-[#108b6a] transition-colors">
+              <a href="/termos" className="text-sm text-[#475467] hover:text-primary transition-colors">
                 Termos de Uso
               </a>
-              <a href="/cookies" className="text-sm text-[#475467] hover:text-[#108b6a] transition-colors">
+              <a href="/cookies" className="text-sm text-[#475467] hover:text-primary transition-colors">
                 Preferências de Cookies
               </a>
             </div>
@@ -51,7 +51,7 @@ const Footer = () => {
               href="https://spaceapps.com.br/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm text-[#475467] hover:text-[#108b6a] transition-colors"
+              className="text-sm text-[#475467] hover:text-primary transition-colors"
             >
               Criado por Spaceapps
             </a>

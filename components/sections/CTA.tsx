@@ -73,7 +73,7 @@ const CTA = () => {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="Coloque seu melhor e-mail"
-                      className="w-full h-11 pl-4 pr-4 bg-white border border-[#d0d5dd] rounded-lg text-base text-[#101828] placeholder-[#667085] focus:outline-none focus:ring-2 focus:ring-[#108b6a] focus:border-transparent"
+                      className="w-full h-11 pl-4 pr-4 bg-white border border-[#d0d5dd] rounded-lg text-base text-tertiary placeholder-[#667085] focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                       required
                       aria-required
                     />
@@ -84,7 +84,7 @@ const CTA = () => {
 
                 <button
                   type="submit"
-                  className="h-11 px-6 bg-[#108b6a] text-white font-semibold text-sm rounded-lg hover:bg-[#0d7456] transition-colors duration-200 whitespace-nowrap disabled:opacity-60"
+                  className="h-11 px-6 bg-primary text-white font-semibold text-sm rounded-lg hover:bg-[#0d7456] transition-colors duration-200 whitespace-nowrap disabled:opacity-60"
                   disabled={loading}
                 >
                   {loading ? "Aguarde..." : "Assinar agora"}

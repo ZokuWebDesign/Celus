@@ -10,9 +10,9 @@ export interface ButtonProps
 
 const buttonVariants = {
   variant: {
-    "primary": "bg-[#108b6a] text-white hover:bg-[#0d7456] active:bg-[#0a5d47] disabled:bg-gray-300 disabled:text-gray-500 shadow-sm",
-    "outline": "border-2 border-transparent bg-transparent text-[#108b6a] hover:border-[#108b6a] active:bg-[#0d7456] disabled:border-gray-300 disabled:text-gray-400 transition-all duration-200",
-    "secondary": "bg-[#edfcf6] text-[#108b6a] hover:bg-[#d4f7e6] active:bg-[#bbf2d8] disabled:bg-gray-100 disabled:text-gray-400",
+    "primary": "bg-primary text-white hover:bg-[#0d7456] active:bg-[#0a5d47] disabled:bg-gray-300 disabled:text-gray-500 shadow-sm",
+    "outline": "border-2 border-transparent bg-transparent text-primary hover:border-primary active:bg-[#0d7456] disabled:border-gray-300 disabled:text-gray-400 transition-all duration-200",
+    "secondary": "bg-[#edfcf6] text-primary hover:bg-[#d4f7e6] active:bg-[#bbf2d8] disabled:bg-gray-100 disabled:text-gray-400",
   },
   size: {
     default: "h-11 px-4 py-2",

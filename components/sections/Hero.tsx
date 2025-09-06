@@ -8,18 +8,72 @@ const Hero = () => {
       id="inicio" 
       className="bg-white relative overflow-hidden"
     >
+      <div className="hidden">
+      {/* 
+      <div className="absolute max-w-7xl mx-auto flex flex-col lg:flex-row items-center z-30">
+
+        <div className="flex-1 flex flex-col items-center justify-center lg:max-w-[648px] min-h-[641px] text-left px-4 lg:px-[72px] lg:rounded-br-[221px] z-20">
+           
+          <h1 className="text-primary text-center lg:text-start text-3xl lg:text-5xl font-bold leading-tight mb-4">
+            Acelere sua tomada de decisão
+          </h1>
+          
+          <p className="text-tertiary text-center lg:text-start text-lg lg:text-2xl leading-relaxed mb-12">
+            Celus, o app de ultrassonografia point-of-care feito para quem precisa de respostas clínicas rápidas, precisas e no seu bolso.
+          </p>
+          
+          <div className="w-full flex flex-col sm:flex-row justify-start gap-2 lg:gap-4">
+            <Button
+              variant="primary"
+              size="xxl"
+              className="w-full lg:w-[224px]"
+            >
+              <a
+                href={STORE_LINKS.APP_STORE}
+                className="w-full"
+              >
+                Baixar agora
+              </a>
+            </Button>
+            <Button 
+              variant="outline"
+              size="xxl"
+              className="w-full lg:w-auto"
+            >
+              <a
+                href="#como-funciona"
+                className="w-full"
+              >
+                Ver funcionalidades
+              </a>
+            </Button>
+          </div>
+
+        </div>
+
+        <img 
+          src="" 
+          alt="Mockup" 
+          className="hidden lg:block max-w-7xl mx-auto absolute top-0 z-10"
+        />
+
+      </div>
+
+      */}
+      </div>
+
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center">
           {/* Left Content */}
-          <div className="flex-1 flex flex-col items-center justify-center lg:max-w-[648px] min-h-[641px] text-left px-6 lg:px-[72px] lg:rounded-br-[221px] z-20"
+          <div className="flex-1 flex flex-col items-center justify-center lg:max-w-[648px] min-h-[641px] text-left px-4 lg:px-[72px] lg:rounded-br-[221px] z-20"
             style={{backgroundImage: "url('https://i.ibb.co/gbkNy0Nn/header.webp')", backgroundSize: "cover", backgroundPosition: "center"}}
           >
             {/* Title */}
-            <h1 className="text-[#108b6a] text-4xl lg:text-5xl font-bold leading-tight mb-4">
+            <h1 className="text-primary text-center lg:text-start text-3xl lg:text-5xl font-bold leading-tight mb-4">
               Acelere sua tomada de decisão
             </h1>
             
             {/* Subtitle */}
-            <p className="text-[#101828] text-lg lg:text-2xl leading-relaxed mb-12">
+            <p className="text-tertiary text-center lg:text-start text-lg lg:text-2xl leading-relaxed mb-12">
               Celus, o app de ultrassonografia point-of-care feito para quem precisa de respostas clínicas rápidas, precisas e no seu bolso.
             </p>
             

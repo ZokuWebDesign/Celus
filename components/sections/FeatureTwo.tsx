@@ -58,17 +58,17 @@ const FeatureTwo = () => {
         {/* Header Content */}
         <div className="text-center mb-12 max-w-[768px] mx-auto">
           {/* Subheading */}
-          <p className="text-[#108b6a] text-base font-semibold mb-6">
+          <p className="text-primary text-base font-semibold mb-6">
             Conteúdo Curado por Especialistas
           </p>
           
           {/* Main Heading */}
-          <h2 className="text-[#108b6a] text-5xl font-bold mb-8 leading-tight">
+          <h2 className="text-primary text-5xl font-bold mb-8 leading-tight">
             Criado por profissionais, para profissionais
           </h2>
           
           {/* Description */}
-          <p className="text-[#101828] text-lg font-medium leading-relaxed">
+          <p className="text-tertiary text-lg font-medium leading-relaxed">
             O Celus foi desenvolvido por uma equipe de especialistas em USOM, com foco em quem está na linha de frente. Nossa missão é democratizar o acesso ao raciocínio clínico e ferramentas confiáveis, seja você médico, paramédico ou residente.
           </p>
         </div>
@@ -87,7 +87,7 @@ const FeatureTwo = () => {
               </div>
               
               {/* Label */}
-              <span className="text-[#101828] text-xs font-medium text-center leading-tight">
+              <span className="text-tertiary text-xs font-medium text-center leading-tight">
                 {specialty.name}
               </span>
             </div>

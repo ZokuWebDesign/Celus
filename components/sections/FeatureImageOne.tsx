@@ -58,7 +58,7 @@ const FeatureImageOne = () => {
           <h2 className="text-primary font-bold text-3xl lg:text-5xl leading-tight mb-6 max-w-4xl mx-auto">
             Quando você mais precisa, o conhecimento não pode faltar
           </h2>
-          <p className="text-[#101828] font-medium text-lg max-w-4xl mx-auto leading-relaxed">
+          <p className="text-tertiary font-medium text-lg max-w-4xl mx-auto leading-relaxed">
             Quando o tempo é curto e a precisão faz diferença entre acertar ou errar, depender de conteúdo desatualizado ou mal estruturado pode custar caro. A realidade é que muitos profissionais da saúde enfrentam barreiras invisíveis todos os dias: pouca padronização, ferramentas dispersas e a sensação constante de que estão sozinhos na hora de decidir. E pior — os recursos disponíveis mais confundem do que ajudam.
           </p>
         </div>

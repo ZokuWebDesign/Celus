@@ -47,13 +47,13 @@ const FAQ = () => {
       <div className="max-w-4xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-12 lg:mb-16">
-          <p className="text-[#108b6a] font-semibold text-base mb-4">
+          <p className="text-primary font-semibold text-base mb-4">
             FAQ
           </p>
-          <h2 className="text-[#108b6a] font-bold text-3xl lg:text-5xl leading-tight mb-6">
+          <h2 className="text-primary font-bold text-3xl lg:text-5xl leading-tight mb-6">
             Perguntas Frequentes
           </h2>
-          <p className="text-[#101828] font-medium text-lg max-w-4xl mx-auto leading-relaxed">
+          <p className="text-tertiary font-medium text-lg max-w-4xl mx-auto leading-relaxed">
             Celus oferece tudo que você precisa para cuidar da sua prática médica e prevenir erros clínicos, com recursos inovadores e personalizados para cada necessidade.
           </p>
         </div>
