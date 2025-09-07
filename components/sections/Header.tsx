@@ -8,6 +8,7 @@ import { STORE_LINKS } from "@/constants/links";
 const Header = () => {
   const isMobile = useIsMobile();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isAtTop, setIsAtTop] = useState(true);
   const menuRef = useRef<HTMLDivElement>(null);
   const isVisible = useScrollDirection();
 
@@ -35,6 +36,15 @@ const Header = () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, [isMobileMenuOpen]);
+  
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsAtTop(window.scrollY === 0);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <>
@@ -43,7 +53,7 @@ const Header = () => {
           isVisible ? 'translate-y-0' : '-translate-y-full'
         }`}
       >
-        <div className="max-w-[1280px] mx-auto">
+        <div className={`${isAtTop ? 'max-w-7xl 2xl:max-w-[1920px]' : 'max-w-7xl'} mx-auto transition-all duration-700`}>
           <div className="flex justify-between items-center px-4 lg:px-[72px] py-4">
             {/* Logo */}
             <div className={`${isMobile ? 'h-8 w-[103px]' : 'h-12 w-[154px]'}`}>
