@@ -62,10 +62,10 @@ const Hero = () => {
       */}
       </div>
 
-      <div className="max-w-7xl 2xl:max-w-[1920px] min-h-[720px] lg:min-h-[641px] 2xl:min-h-[962px] mx-auto flex flex-col lg:flex-row items-center">
+      <div className="max-w-7xl 2xl:max-w-[1920px] min-h-[650px] lg:min-h-[641px] 2xl:min-h-[962px] mx-auto flex flex-col lg:flex-row items-center">
           {/* Left Content */}
           <div 
-            className="flex-1 flex flex-col items-center justify-center w-full lg:max-w-[648px] 2xl:max-w-[972px] min-h-[720px] lg:min-h-[641px] 2xl:min-h-[962px] text-left px-4 lg:px-[72px] lg:rounded-br-[221px] z-20 bg-cover bg-center hero-bg"
+            className="flex-1 flex flex-col items-center justify-center w-full lg:max-w-[648px] 2xl:max-w-[972px] min-h-[650px] lg:min-h-[641px] 2xl:min-h-[962px] text-left px-4 lg:px-[72px] lg:rounded-br-[221px] z-20 bg-cover bg-center hero-bg"
             style={{
               '--bg-mobile': "url('https://i.ibb.co/gbkNy0Nn/header.webp')",
               '--bg-lg': "url('/assets/vectors/hero-header-1280.svg')",
@@ -73,14 +73,14 @@ const Hero = () => {
             } as React.CSSProperties}
           >
             {/* Responsive background: mobile: webp, lg: 1280.svg, 2xl: 1920.svg */}
-            <div className="max-w-[500px] lg:max-w-[763px]">
+            <div className="max-w-[500px] lg:max-w-[763px] text-center lg:text-start">
               {/* Title */}
-              <h1 className="text-primary text-center lg:text-start text-3xl lg:text-5xl font-bold leading-tight mb-4">
+              <h1 className="text-primary text-3xl lg:text-5xl font-bold leading-tight mb-4">
                 Acelere sua tomada de decisão
               </h1>
               
               {/* Subtitle */}
-              <p className="text-tertiary text-center lg:text-start text-lg lg:text-2xl leading-relaxed mb-12">
+              <p className="text-tertiary text-lg lg:text-2xl leading-relaxed mb-12">
                 Celus, o app de ultrassonografia point-of-care feito para quem precisa de respostas clínicas rápidas, precisas e no seu bolso.
               </p>
               

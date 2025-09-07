@@ -14,12 +14,12 @@ export const AUTH_LINKS = {
 
 // Social Media Links
 export const SOCIAL_LINKS = {
-  FACEBOOK: 'https://www.facebook.com/people/celus',
-  INSTAGRAM: 'https://instagram.com/celus',
-  LINKEDIN: 'https://linkedin.com/company/celus',
-  YOUTUBE: 'https://youtube.com/@celus',
-  TIKTOK: 'https://tiktok.com/@celus',
-  X: 'https://x.com/celus',
+  FACEBOOK: 'https://www.facebook.com/people/salusultrassonografia/',
+  INSTAGRAM: 'https://instagram.com/salus_ultrassonografia',
+  LINKEDIN: 'https://linkedin.com/company/salus-ultrassonografia',
+  YOUTUBE: 'https://youtube.com/@salus_ultrassonografia',
+  TIKTOK: 'https://tiktok.com/@salus_ultrassonografia',
+  X: 'https://x.com/salus_ultrassonografia',
   MAIL: 'mailto:suporte@salus-celus.com.br',
   NUMBER: 'tel:+5511999999999',
   LOCAL: '#'
@@ -27,8 +27,8 @@ export const SOCIAL_LINKS = {
 
 // App Store Links
 export const STORE_LINKS = {
-  GOOGLE_PLAY: 'https://play.google.com/store/apps/details?id=celus',
-  APP_STORE: 'https://apps.apple.com/app/celus'
+  GOOGLE_PLAY: 'https://play.google.com/store/apps/details?id=com.celusfront',
+  APP_STORE: 'https://apps.apple.com/br/app/celus-app/id1591738281'
 } as const;
 
 // Page Links

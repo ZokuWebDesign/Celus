@@ -61,7 +61,7 @@ const Contact = () => {
           {/* Form Section */}
           <div className="max-w-[532px]">
             {/* Header */}
-            <div className="mb-12">
+            <div className="mb-12 text-center lg:text-start">
               <p className="text-primary font-semibold text-base mb-4">
                 Contato
               </p>

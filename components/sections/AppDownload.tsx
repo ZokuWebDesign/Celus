@@ -8,7 +8,7 @@ const AppDownload = () => {
         {/* Content Section */}
         <div className="max-w-[674px]">
           {/* Title */}
-          <div className="mb-12">
+          <div className="mb-12 text-center lg:text-start">
             <h2 className="text-primary font-bold text-3xl lg:text-5xl leading-tight mb-6">
               Decida com mais segurança, em menos tempo, direto do celular
             </h2>

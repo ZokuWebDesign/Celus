@@ -63,7 +63,7 @@ const FeatureTwo = () => {
           </p>
           
           {/* Main Heading */}
-          <h2 className="text-primary text-3xl lg:text-5xl font-bold mb-6 lg:mb-8 leading-tight">
+          <h2 className="text-primary text-[28px] lg:text-5xl font-bold mb-6 lg:mb-8 leading-tight">
             Criado por profissionais, para profissionais
           </h2>
           

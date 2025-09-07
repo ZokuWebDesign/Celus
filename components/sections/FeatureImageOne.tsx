@@ -55,7 +55,7 @@ const FeatureImageOne = () => {
           <p className="text-primary font-semibold text-base mb-4">
             Precisão e Agilidade
           </p>
-          <h2 className="text-primary font-bold text-3xl lg:text-5xl leading-tight mb-6 max-w-4xl mx-auto">
+          <h2 className="text-primary font-bold text-[28px] lg:text-5xl leading-tight mb-6 max-w-4xl mx-auto">
             Quando você mais precisa, o conhecimento não pode faltar
           </h2>
           <p className="text-tertiary font-medium text-lg max-w-4xl mx-auto leading-relaxed">

@@ -4,7 +4,7 @@ import { Facebook, MessageCircle } from "lucide-react";
 
 const Footer = () => {
   return (
-    <div className="w-full bg-[#d4f7e6] py-16 px-4 sm:px-6 lg:px-20">
+    <div className="w-full bg-[#d4f7e6] py-8 md:py-16 px-4 sm:px-6 lg:px-20">
       <div className="flex flex-col max-w-7xl mx-auto gap-8">
         {/* Header with Logo */}
         <div className="flex justify-center">

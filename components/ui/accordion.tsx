@@ -25,13 +25,13 @@ const AccordionTrigger = React.forwardRef<
     <AccordionPrimitive.Trigger
       ref={ref}
       className={cn(
-        "group flex flex-1 items-center justify-center py-5 px-6 transition-all hover:bg-gray-50/50",
+        "group flex flex-1 items-center justify-center py-4 md:py-5 px-[12px] md:px-6 transition-all hover:bg-gray-50/50",
         className
       )}
       {...props}
     >
       <div className="flex-1 text-left">
-        <span className="text-lg font-medium text-tertiary leading-[140%]">
+        <span className="text-base md:text-lg font-medium text-tertiary leading-[140%]">
           {children}
         </span>
       </div>
@@ -101,12 +101,12 @@ const AccordionContent = React.forwardRef<
     {...props}
   >
     {/* Divider */}
-    <div className="flex justify-center items-center px-6">
+    <div className="flex justify-center items-center px-[12px] md:px-6">
       <div className="flex-1 h-px bg-[#D5D7DA]"></div>
     </div>
     
     {/* Content */}
-    <div className={cn("py-4 px-6", className)}>
+    <div className={cn("py-4 md:py-5 px-[12px] md:px-6", className)}>
       <div className="text-base font-normal text-tertiary leading-[160%]">
         {children}
       </div>
