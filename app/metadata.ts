@@ -4,11 +4,11 @@ export const metadata = {
     default: 'Celus - Avaliação Inteligente de Nódulos Tireoidianos ⚕️',
   },
   description: 'Aplicação clínica para avaliação estruturada de nódulos tireoidianos usando o protocolo ACR TI-RADS. Suporte profissional para interpretação de ultrassom com clareza, velocidade e precisão.',
-  metadataBase: new URL('https://celus.com.br'),
+  metadataBase: new URL('https://salus-celus.com.br'),
   openGraph: {
     type: 'website',
     locale: 'pt_BR',
-    url: 'https://celus.com.br',
+    url: 'https://salus-celus.com.br',
     siteName: 'Celus',
     title: 'Celus - Avaliação Inteligente de Nódulos Tireoidianos ⚕️',
     description: 'Aplicação clínica para avaliação estruturada de nódulos tireoidianos usando o protocolo ACR TI-RADS. Suporte profissional para interpretação de ultrassom com clareza, velocidade e precisão.',
