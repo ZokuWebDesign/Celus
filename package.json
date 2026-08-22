@@ -4,9 +4,13 @@
   "version": "0.1.0",
   "scripts": {
     "dev": "next dev",
-    "build": "npm run clean && next build",
-    "build:export": "npm run clean && next build",
-    "clean": "powershell -ExecutionPolicy Bypass -File build-clean.ps1",
+    "build": "npm run build:linux",
+    "build:linux": "npm run clean:linux && next build",
+    "build:windows": "npm run clean:windows && next build",
+    "build:export": "npm run build",
+    "clean": "npm run clean:linux",
+    "clean:linux": "rm -rf dist",
+    "clean:windows": "powershell -ExecutionPolicy Bypass -File build-clean.ps1",
     "clean:fallback": "node -e \"try { require('fs').rmSync('dist', { recursive: true, force: true }); } catch (e) { console.log('Clean completed'); }\"",
     "start": "next start",
     "lint": "next lint"
