@@ -24,27 +24,27 @@ const FeatureTwo = () => {
     },
     { 
       name: "Pequenas partes", 
-      src: "https://i.ibb.co/PZ1700KZ/pequenas-partes.webp" 
+      src: "https://cdn.sydapp.com.br/salus-celus.com.br/pequenas-partes.webp" 
     },
     { 
       name: "Pediatria", 
-      src: "https://i.ibb.co/0RXcFQgN/pediatria.webp" 
+      src: "https://cdn.sydapp.com.br/salus-celus.com.br/pediatria.webp" 
     },
     { 
       name: "Vascular", 
-      src: "https://i.ibb.co/WvLpF4bX/vascular.webp" 
+      src: "https://cdn.sydapp.com.br/salus-celus.com.br/vascular.webp" 
     },
     { 
       name: "Medicina fetal", 
-      src: "https://i.ibb.co/zTvQdx0g/fetal.webp" 
+      src: "https://cdn.sydapp.com.br/salus-celus.com.br/fetal.webp" 
     },
     { 
       name: "Medicina interna", 
-      src: "https://i.ibb.co/ZR1DBqth/interna.webp" 
+      src: "https://cdn.sydapp.com.br/salus-celus.com.br/interna.webp" 
     },
     { 
       name: "Urogenital", 
-      src: "https://i.ibb.co/8g0RP6zr/urogenital.webp" 
+      src: "https://cdn.sydapp.com.br/salus-celus.com.br/urogenital.webp" 
     },
     { 
       name: "Mama", 

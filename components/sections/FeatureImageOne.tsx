@@ -88,7 +88,7 @@ const FeatureImageOne = () => {
           {/* Center - Phone Image */}
           <div className="flex-1 max-w-[466px] relative">
             <img
-              src="https://i.ibb.co/wrLHbXSF/comofunciona.webp"
+              src="https://cdn.sydapp.com.br/salus-celus.com.br/comofunciona.webp"
               alt="Celus App Interface"
               className="w-full h-auto rounded-2xl"
             />

@@ -4,7 +4,7 @@ Welcome to **Celus**, a clinical-grade application designed to assist healthcare
 
 You can access the [project's live website here](https://salus-celus.com.br/).
 
-![Project's Cover](https://i.imgur.com/R5KfD6a.png)
+![Project's Cover](https://cdn.sydapp.com.br/salus-celus.com.br/R5KfD6a.webp)
 
 > Celus streamlines the classification of thyroid nodules by guiding the user through each ACR TI-RADS criterion — composition, echogenicity, shape, margin, and echogenic foci — and instantly calculates the final risk score and recommendations.
 

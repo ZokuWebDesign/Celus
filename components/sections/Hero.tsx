@@ -67,7 +67,7 @@ const Hero = () => {
           <div 
             className="flex-1 flex flex-col items-center justify-center w-full lg:max-w-[648px] 2xl:max-w-[972px] min-h-[650px] lg:min-h-[641px] 2xl:min-h-[962px] text-left px-4 lg:px-[72px] lg:rounded-br-[221px] z-20 bg-cover bg-center hero-bg"
             style={{
-              '--bg-mobile': "url('https://i.ibb.co/gbkNy0Nn/header.webp')",
+              '--bg-mobile': "url('https://cdn.sydapp.com.br/salus-celus.com.br/header.webp')",
               '--bg-lg': "url('/assets/vectors/hero-header-1280.svg')",
               '--bg-2xl': "url('/assets/vectors/hero-header-1920.svg')"
             } as React.CSSProperties}
@@ -122,11 +122,11 @@ const Hero = () => {
           />
           */}
           <img 
-            src="https://i.ibb.co/jnrW2pN/Hero.webp"
+            src="https://cdn.sydapp.com.br/salus-celus.com.br/Hero.webp"
             srcSet="
-              https://i.ibb.co/jnrW2pN/Hero.webp 1023w,
-              https://i.ibb.co/jnrW2pN/Hero.webp 1280w,
-              https://i.ibb.co/JWvwxRHp/Hero-1920.webp 1536w
+              https://cdn.sydapp.com.br/salus-celus.com.br/Hero.webp 1023w,
+              https://cdn.sydapp.com.br/salus-celus.com.br/Hero.webp 1280w,
+              https://cdn.sydapp.com.br/salus-celus.com.br/Hero-1920.webp 1536w
             "
             sizes="
               (max-width: 1023px) 100vw,

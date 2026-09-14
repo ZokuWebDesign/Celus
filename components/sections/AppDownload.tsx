@@ -46,7 +46,7 @@ const AppDownload = () => {
         {/* Image Section */}
         <div className="w-full max-w-[510px] max-h-[716px] pt-8 lg:pt-0 relative">
             <img
-              src="https://i.ibb.co/8ny97W07/app-download.webp"
+              src="https://cdn.sydapp.com.br/salus-celus.com.br/app-download.webp"
               alt="Celus App on Mobile"
               className="w-full h-full object-cover"
             />

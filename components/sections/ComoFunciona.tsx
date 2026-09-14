@@ -37,7 +37,7 @@ const ComoFunciona = () => {
       title: "MedUltra",
       description: "Acesse milhares de referências de medidas normais em exames de ultrassonografia.",
       hasImage: true,
-      imageUrl: "https://images.unsplash.com/photo-1576091160550-2173dba999ef" /* https://i.ibb.co/7x2djYxG/medultra.webp */,
+      imageUrl: "https://images.unsplash.com/photo-1576091160550-2173dba999ef" /* https://cdn.sydapp.com.br/salus-celus.com.br/medultra.webp */,
       cardHeight: "h-[484px]",
       imageHeight: "h-[280px]"
     },
@@ -62,7 +62,7 @@ const ComoFunciona = () => {
       title: "",
       description: "",
       hasImage: true,
-      imageUrl: "https://i.ibb.co/DfWnWKT9/resumus.webp",
+      imageUrl: "https://cdn.sydapp.com.br/salus-celus.com.br/resumus.webp",
       cardHeight: "h-[513px]",
       imageHeight: "h-[513px]"
     },
@@ -71,7 +71,7 @@ const ComoFunciona = () => {
       title: "LaudUS",
       description: "Mais de 200 modelos prontos de laudos de ultrassonografia Organizados por especialidade, órgão e patologia.",
       hasImage: true,
-      imageUrl: "https://i.ibb.co/BV9VpQJN/laudus.webp",
+      imageUrl: "https://cdn.sydapp.com.br/salus-celus.com.br/laudus.webp",
       cardHeight: "h-[484px]",
       imageHeight: "h-[251px]"
     },
